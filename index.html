@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tags for SEO and social sharing -->
+    <meta name="description" content="SULFA Computer Technologies provides comprehensive IT and Saleculator POS solutions, hardware, software development, and website design in Abu Dhabi, UAE.">
+    <meta name="keywords" content="IT solutions, POS systems, Saleculator, web development, custom software, hardware sales, IT support, Abu Dhabi, UAE, computer maintenance">
+    <meta name="author" content="SULFA Computer Technologies">
+    
+    <!-- Open Graph for social media sharing -->
+    <meta property="og:title" content="SULFA Computer Technologies - Your Partner in IT Solutions">
+    <meta property="og:description" content="SULFA Computer Technologies provides comprehensive IT and Saleculator POS solutions, hardware, software development, and website design in Abu Dhabi, UAE.">
+    <meta property="og:image" content="https://placehold.co/1200x630/004a99/ffffff?text=SULFA+Computer+Technologies">
+    <meta property="og:url" content="https://www.yourwebsite.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card for Twitter sharing -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SULFA Computer Technologies - Your Partner in IT Solutions">
+    <meta name="twitter:description" content="SULFA Computer Technologies provides comprehensive IT and Saleculator POS solutions, hardware, software development, and website design in Abu Dhabi, UAE.">
+    <meta name="twitter:image" content="https://placehold.co/1200x630/004a99/ffffff?text=SULFA+Computer+Technologies">
+
+    <title>SULFA Computer Technologies</title>
+    <!-- Website Favicon - Using text-based placeholder now -->
+    <link rel="icon" href="https://placehold.co/32x32/2c3e50/ecf0f1?text=S">
+    <style>
+        /* CSS for a professional, sleek, and responsive dark-themed design */
+        :root {
+            --primary-color: hsl(204, 70%, 53%); /* Professional Blue */
+            --secondary-color: #2ecc71; /* A nice Green */
+            --background-dark: #2c3e50; /* Dark Blue-Gray */
+            --background-mid: #34495e; /* Slightly Lighter Dark Blue */
+            --background-light: #4a657c; /* Another Light Dark Blue */
+            --text-light: #ecf0f1; /* Light Gray */
+            --text-dark: #bdc3c7; /* Gray */
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* General Body and HTML structure */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Utility classes */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 5%;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+            box-shadow: 0 6px 15px rgba(46, 204, 113, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .cta-small {
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+        
+        .icon-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: var(--background-mid);
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+            transition: background-color 0.3s ease;
+        }
+
+        .icon-container svg {
+            color: var(--primary-color);
+            width: 32px;
+            height: 32px;
+        }
+        
+        .icon-container-small {
+            background-color: var(--background-light);
+            width: 32px;
+            height: 32px;
+            margin: 0;
+            margin-right: 1rem;
+        }
+        
+        .icon-container-small svg {
+            width: 20px;
+            height: 20px;
+            color: var(--secondary-color);
+        }
+
+        /* Animations */
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        
+        .scroll-animation.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: rgba(44, 62, 80, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+        
+        /* Removed the logo image CSS rule */
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section with Typing Effect */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 80px;
+            background: linear-gradient(180deg, var(--background-dark), var(--background-mid));
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .hero h2 {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+            min-height: 2em;
+        }
+
+        .hero h2 span.typing-text {
+            color: var(--secondary-color);
+        }
+        
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            height: 2rem;
+            background-color: var(--primary-color);
+            animation: blink-cursor 0.75s step-end infinite;
+        }
+        
+        @keyframes blink-cursor {
+            from, to { background-color: transparent; }
+            50% { background-color: var(--primary-color); }
+        }
+
+        .hero-buttons {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Main Content Sections */
+        .section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: auto;
+            border-bottom: 1px solid var(--background-light);
+        }
+        
+        .section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section h2::after {
+            content: '';
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .about-text p {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            color: var(--text-dark);
+        }
+        
+        .features-section {
+            background-color: var(--background-gray);
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background-color: var(--background-mid);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        .service-card h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+        
+        /* Pricing Bundles */
+        .pricing-section {
+            background-color: var(--background-dark);
+        }
+
+        .bundles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .bundle-card {
+            background-color: var(--background-mid);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .bundle-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .bundle-card h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 0;
+        }
+        
+        .bundle-card .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+            margin: 1rem 0;
+        }
+        
+        .bundle-card .price small {
+            font-size: 1rem;
+            color: var(--text-dark);
+        }
+        
+        .bundle-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+            text-align: left;
+            color: var(--text-dark);
+            flex-grow: 1;
+        }
+        
+        .bundle-card li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .bundle-card li svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            color: var(--secondary-color);
+        }
+        /* WhatsApp Button for Pricing Bundles */
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #2599d3;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background 0.3s, transform 0.2s;
+            cursor: pointer;
+        }
+        .whatsapp-btn:hover {
+            background-color: #1ebe5d;
+            transform: translateY(-2px);
+        }
+        .whatsapp-logo {
+            width: 20px;
+            height: 20px;
+        }
+
+
+        /* Saleculator Feature Buttons */
+        .saleculator-toggle {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .saleculator-toggle button {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .saleculator-toggle button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .saleculator-options {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .feature-card {
+            background-color: var(--background-mid);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--background-light);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .feature-card h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .feature-card h4 {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-card p {
+            color: var(--text-dark);
+            margin-top: 0;
+        }
+        
+        .feature-card ul {
+            padding-left: 20px;
+            color: var(--text-dark);
+        }
+
+        .feature-card li {
+            margin-bottom: 5px;
+        }
+
+        .feature-card .sub-section {
+            margin-top: 1.5rem;
+            border-top: 1px solid var(--background-light);
+            padding-top: 1.5rem;
+        }
+
+        /* AI Assistant Section */
+        .ai-assistant {
+            padding: 5rem 5%;
+            background-color: var(--background-light);
+        }
+        
+        .ai-assistant-container {
+            max-width: 800px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .ai-assistant-container textarea {
+            width: 100%;
+            background-color: var(--background-mid);
+            border: 1px solid var(--background-light);
+            color: var(--text-light);
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: var(--font-family);
+            font-size: 1rem;
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .ai-assistant-container button {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border: none;
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .ai-assistant-container button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .ai-assistant-response {
+            background-color: var(--background-mid);
+            border: 1px solid var(--background-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            white-space: pre-wrap; /* Preserves formatting */
+            color: var(--text-light);
+        }
+
+        .loading-dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            min-height: 2rem;
+        }
+
+        .loading-dot {
+            width: 10px;
+            height: 10px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            animation: bounce 1.4s infinite ease-in-out;
+        }
+
+        .loading-dot:nth-child(1) { animation-delay: -0.32s; }
+        .loading-dot:nth-child(2) { animation-delay: -0.16s; }
+        .loading-dot:nth-child(3) { animation-delay: 0s; }
+
+        .hidden {
+            display: none;
+        }
+        
+        /* Welcome message pop-up */
+        #welcome-message-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--background-mid);
+            color: var(--text-light);
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            z-index: 2000;
+            display: none;
+            flex-direction: column;
+            gap: 15px;
+            text-align: center;
+            border: 1px solid var(--primary-color);
+        }
+        
+        #welcome-message-box button {
+            background-color: var(--primary-color);
+            color: var(--background-dark);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        #welcome-message-box button:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        #contact-form-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 90%;
+            max-width: 400px;
+            background-color: var(--background-mid);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+            z-index: 1001;
+            display: none;
+            flex-direction: column;
+            gap: 15px;
+        }
+        @media (max-width: 450px) {
+            #contact-form-container {
+                right: 15px;
+                left: 15px;
+                width: auto;
+            }
+        }
+
+        #contact-form h3 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: left;
+        }
+
+        #contact-form label {
+            font-weight: 700;
+            color: var(--text-light);
+        }
+
+        #contact-form input, #contact-form textarea {
+            padding: 12px;
+            border: 1px solid var(--background-light);
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            transition: border-color 0.3s;
+        }
+
+        #contact-form input:focus, #contact-form textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        #contact-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        #contact-form button {
+            background-color: var(--primary-color);
+            color: var(--background-dark);
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+        }
+
+        #contact-form button:hover {
+            background-color: var(--secondary-color);
+            color: var(--background-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(46, 204, 113, 0.5);
+        }
+
+        /* Floating Chat Button */
+        .chat-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        .chat-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
+        }
+
+        /* Chat icon styling */
+        .chat-float svg {
+            width: 32px;
+            height: 32px;
+        }
+        
+        .chat-float .new-message-badge {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 15px;
+            height: 15px;
+            background-color: red;
+            border-radius: 50%;
+            border: 2px solid var(--text-light);
+            animation: pulse-badge 2s infinite;
+        }
+
+        @keyframes pulse-badge {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--background-mid);
+            text-align: center;
+            padding: 2rem 5%;
+            color: var(--text-dark);
+            border-top: 1px solid var(--background-light);
+        }
+        
+        /* NEW: Hamburger Menu & Responsive Navigation */
+        .nav-links-container {
+            display: flex;
+        }
+
+        .hamburger-menu {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            position: relative;
+            z-index: 1100;
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger-menu .bar {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: var(--text-light);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            margin: 6px 0;
+        }
+        
+        .hamburger-menu.active .bar:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+        .hamburger-menu.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger-menu.active .bar:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            nav ul {
+                display: none; /* Hide the default menu */
+            }
+            .hamburger-menu {
+                display: block; /* Show the hamburger menu on small screens */
+            }
+            .nav-links-container {
+                position: fixed;
+                top: 0;
+                right: -100%; /* Initially off-screen */
+                width: 70%;
+                max-width: 300px;
+                height: 100vh;
+                background-color: var(--background-mid);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+                transition: right 0.4s ease-in-out;
+                z-index: 1050;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            .nav-links-container.open {
+                right: 0; /* Slide in when open */
+            }
+
+            .nav-links-container ul {
+                display: flex; /* Show the list when the container is open */
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 2rem;
+                height: 100%;
+                gap: 2rem;
+            }
+            
+            .nav-links-container ul li {
+                margin: 0;
+            }
+
+            .nav-links-container ul li a {
+                font-size: 1.5rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .chat-float {
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+        
+        /* NEW: Contact Buttons and Flexbox Layout */
+        .contact-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-card {
+            background-color: var(--background-mid);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Contact button group for side-by-side buttons */
+        .contact-buttons-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            white-space: nowrap;
+        }
+        
+        .contact-button:hover {
+            background-color: var(--background-light);
+        }
+        
+        .contact-card p {
+            margin: 0;
+            color: var(--text-dark);
+        }
+
+        .whatsapp-icon-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #2599d3;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .whatsapp-icon-button:hover {
+            background-color: #1ebe5d;
+            transform: translateY(-2px);
+        }
+
+        /* New button for Facebook */
+        .facebook-icon-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #3b5998;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .facebook-icon-button:hover {
+            background-color: #2d4373;
+            transform: translateY(-2px);
+        }
+        
+        /* NEW: Map styles */
+        .map-container {
+            margin-top: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden; /* Ensures rounded corners apply to the iframe */
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 400px; /* Set a consistent height */
+            border: 0; /* Remove default iframe border */
+            display: block;
+        }
+        
+        /* Message box styles */
+        #message-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--background-mid);
+            color: var(--text-light);
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            z-index: 2000;
+            display: none;
+            flex-direction: column;
+            gap: 15px;
+            text-align: center;
+            border: 1px solid var(--primary-color);
+        }
+
+        #message-box p {
+            margin: 0;
+        }
+
+        #message-box button {
+            background-color: var(--primary-color);
+            color: var(--background-dark);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        #message-box button:hover {
+            background-color: var(--secondary-color);
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                SULFA
+            </div>
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-menu" aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <!-- Navigation links wrapper -->
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Who We Are</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#bundles">Our Bundles</a></li>
+                    <li><a href="#saleculator-features">Saleculator</a></li>
+                    <li><a href="#assistant">AI Assistant</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text-container">
+                    <h1>SULFA Computer Technologies</h1>
+                </div>
+                <h2><span class="typing-text"></span><span class="cursor">|</span></h2>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/971556625250" class="cta-button" target="_blank">Contact on WhatsApp</a>
+                    <button class="cta-button" id="play-welcome">Listen to our welcome message</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2>Who We Are</h2>
+                <div class="about-text">
+                    <p>SULFA Computer Technologies is a distinguished provider of comprehensive IT solutions, established in 2017 in Abu Dhabi, UAE. We specialize in empowering businesses to thrive in the digital age through a wide range of services designed to enhance efficiency and security. Our commitment to excellence is reflected in our dedication to providing top-tier technical support and innovative solutions.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- NEW SERVICES SECTION -->
+        <section id="services" class="section">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="about-text">
+                    <p>We pride ourselves on our deep industry knowledge and client-centric approach. As the official Saleculator POS provider in Abu Dhabi, we have built a strong and growing customer base throughout the UAE that relies on our expertise and robust solutions. Our service portfolio includes:</p>
+                    <ul>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg> <b>POS Solutions:</b> Offering specialized Saleculator POS systems for retail, restaurants, cafeterias, and studios.</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-server"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg> <b>IT Support & Maintenance:</b> Providing trusted IT support, Annual Maintenance Contract (AMC) services, and CCTV maintenance.</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hard-drive"><line x1="22" y1="12" x2="2" y2="12"></line><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" y1="16" x2="6.01" y2="16"></line><line x1="10" y1="16" x2="10.01" y2="16"></line></svg> <b>Hardware:</b> Sales and services for both new and used laptops and desktops.</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> <b>Software Development:</b> Customized mobile and desktop application development.</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg> <b>Web Development:</b> Professional website development services to ensure a robust online presence.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="bundles" class="section">
+            <div class="container">
+                <h2>Our Bundles</h2>
+                <div class="bundles-grid">
+                    <div class="bundle-card">
+                        <h3>Professional</h3>
+                        <p class="price">5,499/-</p>
+                        <ul>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Saleculator Software Professional</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> All In One Touch POS Hardware</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Cash Drawer</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 80x80 Thermal Printer</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Wireless Keyboard and Mouse</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Standard Website</li>
+                        </ul>
+                        <!-- WhatsApp Button -->
+                        <a href="https://wa.me/971556625250?text=Hello,%20I%20am%20interested%20in%20the%20Professional%20bundle" target="_blank" class="whatsapp-btn">
+                            <span style="margin-right: 8px;">📱</span> Contact on WhatsApp
+                        </a>
+                    </div>
+                    <div class="bundle-card">
+                        <h3>Standard</h3>
+                        <p class="price">4,499/-</p>
+                        <ul>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Saleculator Software Enterprise</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> All In One Touch POS Hardware</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Cash Drawer</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 80x80 Thermal Printer</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Wireless Keyboard and Mouse</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Standard Website</li>
+                        </ul>
+                        <!-- WhatsApp Button -->
+                        <a href="https://wa.me/971556625250?text=Hello,%20I%20am%20interested%20in%20the%20Standard%20bundle" target="_blank" class="whatsapp-btn">
+                            <span style="margin-right: 8px;">📱</span> Contact on WhatsApp
+                        </a>
+                    </div>
+                    <div class="bundle-card">
+                        <h3>Basic</h3>
+                        <p class="price">3,499/-</p>
+                        <ul>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Saleculator Software Enterprise</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> (Any Mini PC With Monitor)</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Cash Drawer</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 80x80 Thermal Printer</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Wireless Keyboard and Mouse</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Standard Website</li>
+                        </ul>
+                        <!-- WhatsApp Button -->
+                        <a href="https://wa.me/971556625250?text=Hello,%20I%20am%20interested%20in%20the%20Basic%20bundle" target="_blank" class="whatsapp-btn">
+                            <span style="margin-right: 8px;">📱</span> Contact on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="saleculator-features" class="section features-section">
+            <div class="container">
+                <h2>Saleculator POS Features</h2>
+                <div class="saleculator-toggle">
+                    <button id="show-saleculator-options" class="cta-button">Explore Features</button>
+                </div>
+                <div id="saleculator-options" class="saleculator-options hidden">
+                    <button id="show-retail" class="cta-button cta-small">Retail Features</button>
+                    <button id="show-restaurant" class="cta-button cta-small">Restaurant Features</button>
+                </div>
+
+                <!-- Retail Features -->
+<div id="retail-features-card" class="feature-card hidden">
+    <h3>Retail Features</h3>
+    <p>See the Saleculator capabilities that you’ll need at a retail counter.</p>
+
+    <div class="sub-section">
+        <h4>Fast Product Lookups</h4>
+        <p>Associating quick buttons to commonly sold items or using embedded barcodes, you handle any rush hour.</p>
+        <ul>
+            <li><b>Quick Keys:</b> Shortcuts that add commonly sold items with one tap. They can also be used for frequent tasks.</li>
+            <li><b>Embedded Barcodes:</b> Barcodes that contain price, quantity, or weight—commonly used for weighing items, removing manual entry.</li>
+            <li><b>Quick Search:</b> Instantly search or lookup products directly from the sell screen without changing views.</li>
+        </ul>
+    </div>
+
+    <div class="sub-section">
+        <h4>Multiple Payment Methods</h4>
+        <p>Go beyond traditional payments, split bills, and accept partial payments seamlessly.</p>
+        <ul>
+                            <li><b>Variety of Payments:</b> Accept cash, card, debit, advance, foreign currency, gift vouchers, cheques, etc.</li>
+                            <li><b>Partial Payments:</b> Accept more than one payment method per sale (e.g., part cash, part card).</li>
+                            <li><b>Bill Splitting:</b> Split a sale by items across any number of customers.</li>
+                        </ul>
+                    </div>
+
+                    <div class="sub-section">
+                        <h4>Tariff Sales</h4>
+                        <p>Tariffs or price books let you create special pricing for different customer groups.</p>
+                        <ul>
+                            <li><b>Tariffs:</b> Create multiple prices for an item, e.g., wholesale or discounted pricing for loyal customers.</li>
+                        </ul>
+                    </div>
+
+                    <div class="sub-section">
+                        <h4>Returns & Refunds</h4>
+                        <p>Process refunds or exchanges easily from the Edit Sales screen.</p>
+                        <ul>
+                            <li><b>Refund a Sale:</b> Refund full or partial sales; refunded items return to inventory.</li>
+                            <li><b>Returns:</b> Exchange items by editing a bill.</li>
+                        </ul>
+                    </div>
+
+                    <div class="sub-section">
+                        <h4>Cash Closing</h4>
+                        <p>Perform day-end or shift closing to balance your cash drawer and maintain accountability.</p>
+                        <ul>
+                            <li><b>Cash Closing:</b> Record cash and coins in the drawer, generate reports, and email summaries. Supports counter-wise and central closing.</li>
+                            <li><b>Blind Closing:</b> Cashiers enter actual cash without seeing expected balances, preventing manipulation.</li>
+                            <li><b>Partial Closing:</b> Generate sequence-numbered reports for shift handovers.</li>
+                        </ul>
+                    </div>
+
+                    <div class="sub-section">
+                        <h4>Inventory</h4>
+                        <p>Track stock, purchases, and product performance across locations.</p>
+                        <ul>
+                            <li><b>Purchase:</b> Save purchase invoices from POS and manage supplier payments.</li>
+                            <li><b>Reorder Levels:</b> Get alerts when stock runs low.</li>
+                            <li><b>Stock Transfer:</b> Transfer items easily between stores or warehouses.</li>
+                        </ul>
+                    </div>
+
+                    <div class="sub-section">
+                        <h4>Customers</h4>
+                        <p>Maintain customer records, allow credit sales, and build loyalty.</p>
+                        <ul>
+                            <li><b>Quick Creation & Lookup:</b> Add customers from the sales screen or scan loyalty cards.</li>
+                            <li><b>Customer Credits:</b> Enable debt sales and track pending balances with detailed customer diaries.</li>
+                            <li><b>Customer Loyalty:</b> Award loyalty points for purchases and allow redemption later.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                                <!-- Restaurant Features -->
+<div id="restaurant-features-card" class="feature-card hidden">
+    <h3>Restaurant Features</h3>
+    <p>Restaurants have specific needs that retail shops don’t have. Along with the Point of Sale features, here are the features your restaurant must have.</p>
+
+    <div class="sub-section">
+        <h4>Floors & Tables</h4>
+        <p>Associating quick buttons to commonly sold items or using embedded barcodes helps you handle any rush hour.</p>
+        <ul>
+                            <li><b>Quick Keys:</b> Shortcuts that add a commonly sold item to the sales ticket; can also execute frequent tasks.</li>
+                            <li><b>Embedded Barcodes:</b> Carry item price, quantity, or weight, reducing manual entry for weighing items.</li>
+                            <li><b>Quick Search:</b> Lookup products directly from the sales screen. Floor and table management ensures best service and efficient workflow.</li>
+                            <li><b>Floor & Table Management:</b> Track customers from order to bill across multiple floors and tables for optimal dining experience.</li>
+                            <li><b>Table Alerts:</b> Real-time notifications for table status.</li>
+                            <li><b>Table Shifting & Merging:</b> Move or combine tables easily during service.</li>
+                        </ul>
+                    </div>
+
+                    <div class="sub-section">
+                        <h4>Kitchen Order Printing</h4>
+                        <p>Streamline orders from POS to kitchen efficiently.</p>
+                        <ul>
+                            <li><b>Multiple Payment Methods:</b> Accept cash, card, debt, advance, foreign currency, gift vouchers, cheques, etc.</li>
+                            <li><b>Partial Payments:</b> Accept multiple payment methods per sale; collect remaining balance later.</li>
+                            <li><b>Bill Splitting:</b> Quickly split sales by item across customers.</li>
+                        </ul>
+                    </div>
+
+                    <div class="sub-section">
+                        <h4>Bill Settlement & Tariffs</h4>
+                        <ul>
+                            <li><b>Bill Settlement:</b> Apply special pricing for customers using tariffs or price books.</li>
+                            <li><b>Tariffs:</b> Create multiple prices for items based on customer category, wholesale, or loyalty discounts.</li>
+                        </ul>
+                    </div>
+
+                    <div class="sub-section">
+                        <h4>Costing</h4>
+                        <ul>
+                            <li><b>Refund a Sale:</b> Refund full or partial sales; refunded items return to inventory.</li>
+                            <li><b>Returns:</b> Exchange items by editing bills instead of refunds.</li>
+                        </ul>
+                    </div>
+
+                    <div class="sub-section">
+                        <h4>Online & PDA Orders</h4>
+                        <ul>
+                            <li>Integrate online or PDA orders into POS workflow seamlessly.</li>
+                        </ul>
+                    </div>
+
+                    <div class="sub-section">
+                        <h4>Cash Closing</h4>
+                        <ul>
+                            <li><b>Cash Closing:</b> End-of-day or shift cash balancing; counter-wise or central closing. Include notes and email reports.</li>
+                            <li><b>Blind Closing:</b> Cashier enters actual counts without seeing expected balances, preventing manipulation.</li>
+                            <li><b>Partial Closing:</b> Generate reports without removing cash, ideal for shift handovers.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="assistant" class="section ai-assistant">
+            <div class="container">
+                <h2>AI Business Assistant</h2>
+                <p style="text-align: center; color: var(--text-light);">Describe your business needs, and our AI assistant will recommend the best services for you.</p>
+                <div class="ai-assistant-container">
+                    <textarea id="ai-input" placeholder="Example: I own a small retail store and need help with managing sales and inventory."></textarea>
+                    <button id="ai-submit">Get Recommendations</button>
+                    <div id="ai-loading" class="loading-dots hidden">
+                        <div class="loading-dot"></div>
+                        <div class="loading-dot"></div>
+                        <div class="loading-dot"></div>
+                    </div>
+                    <div id="ai-response" class="ai-assistant-response hidden"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p style="max-width: 800px; margin: auto; text-align: center;">We’re here to help. Get help with choosing SULFA, or ask about a previous purchase.</p>
+                <div class="contact-content">
+                    <div class="contact-card">
+                        <h3>Chat with us</h3>
+                        <p>We've got live Social Experts waiting to help you Monday to Friday from 9am to 5pm EST.</p>
+                        <!-- New button group to hold social buttons -->
+                        <div class="contact-buttons-group">
+                            <a href="https://wa.me/971556625250?text=Hello,%20I%20am%20interested%20in%20%20I Would like to know more about your offer%20bundle" target="_blank" class="whatsapp-icon-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle">
+                                    <path d="M21 11.5a8.38 8.38 0 0 1-.95 4.39 8.5 8.5 0 0 1-5.75 3.82L12 21.5a1 1 0 0 1-1.39-.77L10.3 16a8.5 8.5 0 0 1-5.75-3.82 8.38 8.38 0 0 1-.95-4.39 8.5 8.5 0 0 1 8.5-8.5 8.5 8.5 0 0 1 8.5 8.5z" />
+                                </svg>
+                                <span>WhatsApp Chat</span>
+                            </a>
+                            <a href="https://www.facebook.com/sulfacomputertechnology" target="_blank" class="facebook-icon-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                                <span>Facebook Page</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Email Us</h3>
+                        <p>Drop us an email at:</p>
+                        <a href="mailto:sales@sulfa.com" class="contact-button">Sales: sales@sulfa.com</a>
+                        <a href="mailto:support@sulfa.com" class="contact-button">Support: support@sulfa.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Give us a call</h3>
+                        <p>Give us a ring. Our Experts are standing by Monday to Friday from 9am to 5pm EST.</p>
+                        <a href="tel:+971556625250" class="contact-button">+971 55 662 5250</a>
+                    </div>
+                </div>
+                <!-- Google Map container -->
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232565.41896995564!2d54.39381147329352!3d24.387054129172736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e440f723ef2b9%3A0xc7cc2e9341971108!2sAbu%20Dhabi!5e0!3m2!1sen!2sae!4v1756111213748!5m2!1sen!2sae" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="welcome-message-box" class="hidden">
+        <h3>Welcome to SULFA Computer Technologies</h3>
+        <p>Hi there! We’re here to assist you. To help us serve you better, could you please provide your email and phone number?</p>
+        <p>For support, you can reach our team directly on <a href="mailto:support@sulfacomputertechnologies.com">support@sulfacomputertechnologies.com</a> Or <a href="tel:+971556625250">+971556625250</a></p>
+        <button id="dismiss-welcome-btn">OK</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 SULFA Computer Technologies. All Rights Reserved.</p>
+    </footer>
+
+    <div id="message-box" class="hidden">
+        <p id="message-box-text"></p>
+        <button id="message-box-button">OK</button>
+    </div>
+
+    <!-- Floating Chat Button -->
+    <div class="chat-float">
+        <button id="toggle-chat-btn" aria-label="Open chat window">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.95 4.39 8.5 8.5 0 0 1-5.75 3.82L12 21.5a1 1 0 0 1-1.39-.77L10.3 16a8.5 8.5 0 0 1-5.75-3.82 8.38 8.38 0 0 1-.95-4.39 8.5 8.5 0 0 1 8.5-8.5 8.5 8.5 0 0 1 8.5 8.5z" />
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const typingElement = document.querySelector('.typing-text');
+            const phrases = ["Your Partner in IT Solutions.", "Empowering Your Business.", "Saleculator POS Provider in Abu Dhabi."];
+            let phraseIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 100;
+            let delayBetweenPhrases = 2000;
+
+            function typeWriter() {
+                const currentPhrase = phrases[phraseIndex];
+                if (isDeleting) {
+                    typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                    charIndex--;
+                    typingSpeed = 50;
+                } else {
+                    typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                    charIndex++;
+                    typingSpeed = 100;
+                }
+
+                if (!isDeleting && charIndex === currentPhrase.length) {
+                    isDeleting = true;
+                    typingSpeed = delayBetweenPhrases;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    typingSpeed = 100;
+                }
+
+                setTimeout(typeWriter, typingSpeed);
+            }
+
+            // Only run if the element exists to prevent errors
+            if (typingElement) {
+                typeWriter();
+            }
+
+            // Saleculator Features Toggle
+            const showSaleculatorOptionsBtn = document.getElementById('show-saleculator-options');
+            const saleculatorOptions = document.getElementById('saleculator-options');
+            const retailFeaturesCard = document.getElementById('retail-features-card');
+            const restaurantFeaturesCard = document.getElementById('restaurant-features-card');
+            const showRetailBtn = document.getElementById('show-retail');
+            const showRestaurantBtn = document.getElementById('show-restaurant');
+            
+            if (showSaleculatorOptionsBtn) {
+                showSaleculatorOptionsBtn.addEventListener('click', () => {
+                    if (saleculatorOptions) {
+                        saleculatorOptions.classList.toggle('hidden');
+                    }
+                    if (retailFeaturesCard) {
+                        retailFeaturesCard.classList.add('hidden');
+                    }
+                    if (restaurantFeaturesCard) {
+                        restaurantFeaturesCard.classList.add('hidden');
+                    }
+                });
+            }
+            
+            if (showRetailBtn) {
+                showRetailBtn.addEventListener('click', () => {
+                    if (retailFeaturesCard) {
+                        retailFeaturesCard.classList.remove('hidden');
+                    }
+                    if (restaurantFeaturesCard) {
+                        restaurantFeaturesCard.classList.add('hidden');
+                    }
+                    document.getElementById('saleculator-features').scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+            
+            if (showRestaurantBtn) {
+                showRestaurantBtn.addEventListener('click', () => {
+                    if (restaurantFeaturesCard) {
+                        restaurantFeaturesCard.classList.remove('hidden');
+                    }
+                    if (retailFeaturesCard) {
+                        retailFeaturesCard.classList.add('hidden');
+                    }
+                    document.getElementById('saleculator-features').scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+
+            // AI Assistant functionality
+            const aiInput = document.getElementById('ai-input');
+            const aiSubmitBtn = document.getElementById('ai-submit');
+            const aiResponseDiv = document.getElementById('ai-response');
+            const aiLoadingDiv = document.getElementById('ai-loading');
+            const messageBox = document.getElementById('message-box');
+            const messageBoxText = document.getElementById('message-box-text');
+            const messageBoxButton = document.getElementById('message-box-button');
+
+            function showMessageBox(message) {
+                if (messageBox && messageBoxText) {
+                    messageBoxText.textContent = message;
+                    messageBox.style.display = 'flex';
+                    const backdrop = document.createElement('div');
+                    backdrop.id = 'backdrop';
+                    backdrop.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1999;';
+                    document.body.appendChild(backdrop);
+                }
+            }
+            
+            if (messageBoxButton && messageBox) {
+                messageBoxButton.addEventListener('click', () => {
+                    messageBox.style.display = 'none';
+                    const backdrop = document.getElementById('backdrop');
+                    if (backdrop) {
+                        backdrop.remove();
+                    }
+                });
+            }
+
+            if (aiSubmitBtn && aiInput && aiLoadingDiv && aiResponseDiv) {
+                aiSubmitBtn.addEventListener('click', async () => {
+                    const prompt = aiInput.value.trim();
+                    if (prompt === "") {
+                        showMessageBox("Please describe your business needs.");
+                        return;
+                    }
+
+                    aiLoadingDiv.classList.remove('hidden');
+                    aiResponseDiv.classList.add('hidden');
+                    aiResponseDiv.textContent = '';
+                    aiSubmitBtn.disabled = true;
+
+                    const services = [
+                        "Saleculator POS solutions for retail stores.",
+                        "Saleculator POS solutions for restaurants and cafeterias.",
+                        "Customized Mobile/ Desktop App Development.",
+                        "Website developing.",
+                        "IT support and AMC services.",
+                        "CCTV maintenance.",
+                        "Sales and services for used laptops and desktops."
+                    ];
+                    
+                    let chatHistory = [{
+                        role: "user",
+                        parts: [{ text: `Based on the following user input, recommend one or more services from this list: ${services.join(', ')}. The user's input is: "${prompt}". Explain why you recommend these services in a professional and clear manner. If the input is not related to any service, politely decline.` }]
+                    }];
+
+                    const payload = { contents: chatHistory };
+                    const apiKey = "";
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+                    let response;
+                    let result;
+                    let retries = 3;
+                    let delay = 1000;
+
+                    for (let i = 0; i < retries; i++) {
+                        try {
+                            response = await fetch(apiUrl, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify(payload)
+                            });
+
+                            if (response.status === 429) {
+                                await new Promise(res => setTimeout(res, delay));
+                                delay *= 2;
+                                continue;
+                            }
+
+                            result = await response.json();
+                            if (result && result.candidates && result.candidates.length > 0) {
+                                const text = result.candidates[0].content.parts[0].text;
+                                aiResponseDiv.textContent = text;
+                                aiResponseDiv.classList.remove('hidden');
+                            } else {
+                                aiResponseDiv.textContent = "Sorry, I couldn't get a recommendation right now. Please try again later.";
+                                aiResponseDiv.classList.remove('hidden');
+                            }
+                            break;
+                        } catch (error) {
+                            if (i < retries - 1) {
+                                await new Promise(res => setTimeout(res, delay));
+                                delay *= 2;
+                            } else {
+                                showMessageBox("An error occurred while fetching a recommendation. Please check your network and try again.");
+                                console.error('API call failed:', error);
+                            }
+                        }
+                    }
+                    
+                    aiLoadingDiv.classList.add('hidden');
+                    aiSubmitBtn.disabled = false;
+                });
+            }
+            
+            // TTS Functionality
+            const playWelcomeBtn = document.getElementById('play-welcome');
+            let audioContext;
+
+            // Only initialize audio context if the button exists and is clicked
+            if (playWelcomeBtn) {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            }
+
+            function base64ToArrayBuffer(base64) {
+                const binaryString = atob(base64);
+                const len = binaryString.length;
+                const bytes = new Uint8Array(len);
+                for (let i = 0; i < len; i++) {
+                    bytes[i] = binaryString.charCodeAt(i);
+                }
+                return bytes.buffer;
+            }
+
+            function pcmToWav(pcm16, sampleRate) {
+                const pcmData = pcm16.buffer;
+                const wavHeader = new Uint8Array(44);
+                const view = new DataView(wavHeader.buffer);
+
+                // RIFF identifier
+                view.setUint32(0, 0x52494646, false); // "RIFF"
+                // file length (set later)
+                view.setUint32(4, 36 + pcmData.byteLength, true);  
+                // RIFF type
+                view.setUint32(8, 0x57415645, false); // "WAVE"
+                // format chunk identifier
+                view.setUint32(12, 0x666d7420, false); // "fmt "
+                // format chunk length
+                view.setUint32(16, 16, true);
+                // sample format (1 = PCM)
+                view.setUint16(20, 1, true);
+                // channel count
+                view.setUint16(22, 1, true);
+                // sample rate
+                view.setUint32(24, sampleRate, true);
+                // byte rate (sample rate * block align)
+                view.setUint32(28, sampleRate * 2, true);
+                // block align (channels * bytes per sample)
+                view.setUint16(32, 2, true);
+                // bits per sample
+                view.setUint16(34, 16, true);
+                // data chunk identifier
+                view.setUint32(36, 0x64617461, false); // "data"
+                // data chunk length (set later)
+                view.setUint32(40, pcmData.byteLength, true);
+
+                const wavBlob = new Blob([wavHeader, pcmData], { type: 'audio/wav' });
+                return wavBlob;
+            }
+
+            if (playWelcomeBtn) {
+                playWelcomeBtn.addEventListener('click', async () => {
+                    playWelcomeBtn.disabled = true;
+                    const originalText = playWelcomeBtn.textContent;
+                    playWelcomeBtn.textContent = 'Generating...';
+
+                    const textToSpeak = "Welcome to SULFA Computer Technologies, your trusted partner for all IT and POS solutions. We're here to help your business succeed.";
+                    const prompt = `Say in a professional and warm tone: ${textToSpeak}`;
+                    const payload = {
+                        contents: [{
+                            parts: [{ text: prompt }]
+                        }],
+                        generationConfig: {
+                            responseModalities: ["AUDIO"],
+                            speechConfig: {
+                                voiceConfig: {
+                                    prebuiltVoiceConfig: { voiceName: "Rasalgethi" }
+                                }
+                            }
+                        },
+                        model: "gemini-2.5-flash-preview-tts"
+                    };
+                    const apiKey = "";
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+
+                    let response;
+                    let result;
+                    let retries = 3;
+                    let delay = 1000;
+
+                    for (let i = 0; i < retries; i++) {
+                        try {
+                            response = await fetch(apiUrl, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify(payload)
+                            });
+
+                            if (response.status === 429) {
+                                await new Promise(res => setTimeout(res, delay));
+                                delay *= 2;
+                                continue;
+                            }
+
+                            result = await response.json();
+                            const part = result?.candidates?.[0]?.content?.parts?.[0];
+                            const audioData = part?.inlineData?.data;
+                            const mimeType = part?.inlineData?.mimeType;
+
+                            if (audioData && mimeType && mimeType.startsWith("audio/L16")) {
+                                const sampleRate = parseInt(mimeType.match(/rate=(\d+)/)[1], 10);
+                                const pcmData = base64ToArrayBuffer(audioData);
+                                const pcm16 = new Int16Array(pcmData);
+                                const wavBlob = pcmToWav(pcm16, sampleRate);
+                                const audioUrl = URL.createObjectURL(wavBlob);
+                                const audio = new Audio(audioUrl);
+                                audio.play().catch(e => showMessageBox("Failed to play audio. Your browser might be blocking autoplay."));
+                            } else {
+                                showMessageBox("Sorry, failed to generate audio. Please try again.");
+                            }
+                            break;
+                        } catch (error) {
+                            if (i < retries - 1) {
+                                await new Promise(res => setTimeout(res, delay));
+                                delay *= 2;
+                            } else {
+                                showMessageBox("An error occurred while generating audio. Please try again later.");
+                                console.error("Audio generation failed:", error);
+                            }
+                        }
+                    }
+                    
+                    playWelcomeBtn.textContent = originalText;
+                    playWelcomeBtn.disabled = false;
+                });
+            }
+            
+            // Contact form functionality
+            const contactForm = document.getElementById('contact-form');
+            const formSubmitBtn = document.getElementById('form-submit-btn');
+            const contactFormContainer = document.getElementById('contact-form-container');
+
+            if (contactForm && formSubmitBtn && contactFormContainer) {
+                contactForm.addEventListener('submit', (event) => {
+                    event.preventDefault(); // Prevents the default form submission
+
+                    formSubmitBtn.disabled = true;
+                    const originalBtnText = formSubmitBtn.textContent;
+                    formSubmitBtn.textContent = 'Sending...';
+
+                    // Simulate form submission
+                    setTimeout(() => {
+                        const name = document.getElementById('name').value;
+                        
+                        // Display a success message
+                        showMessageBox(`Thank you, ${name}! Your message has been sent successfully.`);
+                        
+                        // Reset the form and button
+                        contactForm.reset();
+                        formSubmitBtn.textContent = originalBtnText;
+                        formSubmitBtn.disabled = false;
+                        contactFormContainer.style.display = 'none';
+                    }, 1500); // Simulate a network delay
+                });
+            }
+
+            // Floating chat widget functionality
+            const toggleChatBtn = document.getElementById('toggle-chat-btn');
+            
+            if (toggleChatBtn && contactFormContainer) {
+                toggleChatBtn.addEventListener('click', () => {
+                    contactFormContainer.style.display = contactFormContainer.style.display === 'flex' ? 'none' : 'flex';
+                });
+            }
+
+            // Welcome message pop-up functionality
+            const welcomeMessageBox = document.getElementById('welcome-message-box');
+            const dismissWelcomeBtn = document.getElementById('dismiss-welcome-btn');
+
+            if (welcomeMessageBox && dismissWelcomeBtn) {
+                // Check if the user has already seen the welcome message
+                const hasSeenWelcomeMessage = localStorage.getItem('hasSeenWelcomeMessage');
+                if (!hasSeenWelcomeMessage) {
+                    // Show the welcome message pop-up after a short delay
+                    setTimeout(() => {
+                        welcomeMessageBox.style.display = 'flex';
+                    }, 1000);
+                }
+
+                dismissWelcomeBtn.addEventListener('click', () => {
+                    welcomeMessageBox.style.display = 'none';
+                    // Set the flag in localStorage so it doesn't show up again
+                    localStorage.setItem('hasSeenWelcomeMessage', 'true');
+                });
+            }
+            
+            // NEW: Hamburger menu functionality
+            const hamburgerBtn = document.querySelector('.hamburger-menu');
+            const navLinksContainer = document.querySelector('.nav-links-container');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            if (hamburgerBtn && navLinksContainer) {
+                hamburgerBtn.addEventListener('click', () => {
+                    hamburgerBtn.classList.toggle('active');
+                    navLinksContainer.classList.toggle('open');
+                });
+            }
+            
+            // Close the menu when a nav link is clicked (for mobile)
+            if (navLinksContainer) {
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (hamburgerBtn) {
+                            hamburgerBtn.classList.remove('active');
+                        }
+                        navLinksContainer.classList.remove('open');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
