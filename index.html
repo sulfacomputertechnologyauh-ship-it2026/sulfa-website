@@ -1,1739 +1,1102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Meta tags for SEO and social sharing -->
-    <meta name="description" content="SULFA Computer Technologies provides comprehensive IT and Saleculator POS solutions, hardware, software development, and website design in Abu Dhabi, UAE.">
-    <meta name="keywords" content="IT solutions, POS systems, Saleculator, web development, custom software, hardware sales, IT support, Abu Dhabi, UAE, computer maintenance">
-    <meta name="author" content="SULFA Computer Technologies">
+    <title>SULFA Computer Technology LLC - Enterprise IT & All-in-One Solutions Abu Dhabi</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans for English, Cairo for Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
     
-    <!-- Open Graph for social media sharing -->
-    <meta property="og:title" content="SULFA Computer Technologies - Your Partner in IT Solutions">
-    <meta property="og:description" content="SULFA Computer Technologies provides comprehensive IT and Saleculator POS solutions, hardware, software development, and website design in Abu Dhabi, UAE.">
-    <meta property="og:image" content="https://placehold.co/1200x630/004a99/ffffff?text=SULFA+Computer+Technologies">
-    <meta property="og:url" content="https://www.yourwebsite.com">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card for Twitter sharing -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SULFA Computer Technologies - Your Partner in IT Solutions">
-    <meta name="twitter:description" content="SULFA Computer Technologies provides comprehensive IT and Saleculator POS solutions, hardware, software development, and website design in Abu Dhabi, UAE.">
-    <meta name="twitter:image" content="https://placehold.co/1200x630/004a99/ffffff?text=SULFA+Computer+Technologies">
-
-    <title>SULFA Computer Technologies</title>
-    <!-- Website Favicon - Using text-based placeholder now -->
-    <link rel="icon" href="https://placehold.co/32x32/2c3e50/ecf0f1?text=S">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        brandDark: {
+                            50: '#f4f6fa',
+                            100: '#e9edf5',
+                            200: '#ccd8ea',
+                            300: '#9fb5d7',
+                            400: '#6b8cbd',
+                            500: '#486da3',
+                            600: '#375484',
+                            700: '#2e456d',
+                            800: '#283b5c',
+                            900: '#1b2536',
+                            950: '#0c131f',
+                        },
+                        techBlue: {
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                        },
+                        accentGold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                        }
+                    },
+                    boxShadow: {
+                        'neon-glow': '0 0 15px rgba(14, 165, 233, 0.25)',
+                    }
+                }
+            }
+        }
+    </script>
+    
     <style>
-        /* CSS for a professional, sleek, and responsive dark-themed design */
-        :root {
-            --primary-color: hsl(204, 70%, 53%); /* Professional Blue */
-            --secondary-color: #2ecc71; /* A nice Green */
-            --background-dark: #2c3e50; /* Dark Blue-Gray */
-            --background-mid: #34495e; /* Slightly Lighter Dark Blue */
-            --background-light: #4a657c; /* Another Light Dark Blue */
-            --text-light: #ecf0f1; /* Light Gray */
-            --text-dark: #bdc3c7; /* Gray */
-            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        /* General Body and HTML structure */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--background-dark);
-            color: var(--text-light);
-            font-family: var(--font-family);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        /* Utility classes */
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 5%;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: var(--text-light);
-            padding: 15px 30px;
-            border-radius: 5px;
-            font-weight: bold;
-            text-decoration: none;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .cta-button:hover {
-            background-color: var(--secondary-color);
-            box-shadow: 0 6px 15px rgba(46, 204, 113, 0.5);
-            transform: translateY(-3px);
-        }
-
-        .cta-small {
-            padding: 10px 20px;
-            font-size: 1rem;
-        }
+        .font-active-en { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-active-ar { font-family: 'Cairo', sans-serif; }
         
-        .icon-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            background-color: var(--background-mid);
-            border-radius: 50%;
-            margin: 0 auto 1rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-            transition: background-color 0.3s ease;
+        .corporate-gradient-bg {
+            background: radial-gradient(circle at top right, rgba(27, 37, 54, 0.95) 0%, rgba(12, 19, 31, 1) 100%);
         }
-
-        .icon-container svg {
-            color: var(--primary-color);
-            width: 32px;
-            height: 32px;
+        .tech-circuit-lines {
+            background-image: radial-gradient(rgba(14, 165, 233, 0.08) 1.2px, transparent 1.2px);
+            background-size: 32px 32px;
         }
-        
-        .icon-container-small {
-            background-color: var(--background-light);
-            width: 32px;
-            height: 32px;
-            margin: 0;
-            margin-right: 1rem;
-        }
-        
-        .icon-container-small svg {
-            width: 20px;
-            height: 20px;
-            color: var(--secondary-color);
-        }
-
-        /* Animations */
-        .scroll-animation {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-        
-        .scroll-animation.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Header and Navigation */
-        header {
-            background-color: rgba(44, 62, 80, 0.9);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--primary-color);
-        }
-        
-        /* Removed the logo image CSS rule */
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin-left: 2rem;
-        }
-
-        nav ul li a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Hero Section with Typing Effect */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding-top: 80px;
-            background: linear-gradient(180deg, var(--background-dark), var(--background-mid));
-            position: relative;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            padding: 0 2rem;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-        
-        .hero h2 {
-            font-size: clamp(1.2rem, 3vw, 2rem);
-            font-weight: 500;
-            color: var(--text-dark);
-            margin-bottom: 2rem;
-            min-height: 2em;
-        }
-
-        .hero h2 span.typing-text {
-            color: var(--secondary-color);
-        }
-        
-        .cursor {
-            display: inline-block;
-            width: 3px;
-            height: 2rem;
-            background-color: var(--primary-color);
-            animation: blink-cursor 0.75s step-end infinite;
-        }
-        
-        @keyframes blink-cursor {
-            from, to { background-color: transparent; }
-            50% { background-color: var(--primary-color); }
-        }
-
-        .hero-buttons {
-            margin-top: 2rem;
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        /* Main Content Sections */
-        .section {
-            padding: 5rem 5%;
-            max-width: 1200px;
-            margin: auto;
-            border-bottom: 1px solid var(--background-light);
-        }
-        
-        .section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-        
-        .section h2::after {
-            content: '';
-            width: 80px;
-            height: 3px;
-            background-color: var(--secondary-color);
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .about-text p {
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-            color: var(--text-dark);
-        }
-        
-        .features-section {
-            background-color: var(--background-gray);
-        }
-        
-        /* Services Section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        .service-card {
-            background-color: var(--background-mid);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-        }
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-        }
-        .service-card h3 {
-            color: var(--primary-color);
-            font-size: 1.5rem;
-            margin-top: 0;
-        }
-        
-        /* Pricing Bundles */
-        .pricing-section {
-            background-color: var(--background-dark);
-        }
-
-        .bundles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .bundle-card {
-            background-color: var(--background-mid);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .bundle-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-        }
-        
-        .bundle-card h3 {
-            color: var(--primary-color);
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-top: 0;
-        }
-        
-        .bundle-card .price {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--secondary-color);
-            margin: 1rem 0;
-        }
-        
-        .bundle-card .price small {
-            font-size: 1rem;
-            color: var(--text-dark);
-        }
-        
-        .bundle-card ul {
-            list-style: none;
-            padding: 0;
-            margin: 1.5rem 0;
-            text-align: left;
-            color: var(--text-dark);
-            flex-grow: 1;
-        }
-        
-        .bundle-card li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .bundle-card li svg {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-            color: var(--secondary-color);
-        }
-        /* WhatsApp Button for Pricing Bundles */
-        .whatsapp-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
-            padding: 12px 20px;
-            background-color: #2599d3;
-            color: white;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: background 0.3s, transform 0.2s;
-            cursor: pointer;
-        }
-        .whatsapp-btn:hover {
-            background-color: #1ebe5d;
-            transform: translateY(-2px);
-        }
-        .whatsapp-logo {
-            width: 20px;
-            height: 20px;
-        }
-
-
-        /* Saleculator Feature Buttons */
-        .saleculator-toggle {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .saleculator-toggle button {
-            background-color: var(--primary-color);
-            color: var(--text-light);
-            padding: 15px 30px;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            text-transform: uppercase;
-            border: none;
-            transition: all 0.3s ease;
-        }
-        .saleculator-toggle button:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-        }
-
-        .saleculator-options {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-        }
-        
-        .feature-card {
-            background-color: var(--background-mid);
-            padding: 2rem;
-            border-radius: 10px;
-            border: 1px solid var(--background-light);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: left;
-            margin-bottom: 2rem;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        .feature-card h3 {
-            color: var(--primary-color);
-            font-size: 1.8rem;
-            margin-top: 0;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .feature-card h4 {
-            color: var(--secondary-color);
-            font-size: 1.2rem;
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .feature-card p {
-            color: var(--text-dark);
-            margin-top: 0;
-        }
-        
-        .feature-card ul {
-            padding-left: 20px;
-            color: var(--text-dark);
-        }
-
-        .feature-card li {
-            margin-bottom: 5px;
-        }
-
-        .feature-card .sub-section {
-            margin-top: 1.5rem;
-            border-top: 1px solid var(--background-light);
-            padding-top: 1.5rem;
-        }
-
-        /* AI Assistant Section */
-        .ai-assistant {
-            padding: 5rem 5%;
-            background-color: var(--background-light);
-        }
-        
-        .ai-assistant-container {
-            max-width: 800px;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .ai-assistant-container textarea {
-            width: 100%;
-            background-color: var(--background-mid);
-            border: 1px solid var(--background-light);
-            color: var(--text-light);
-            padding: 1rem;
-            border-radius: 8px;
-            font-family: var(--font-family);
-            font-size: 1rem;
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .ai-assistant-container button {
-            background-color: var(--primary-color);
-            color: var(--text-light);
-            border: none;
-            padding: 15px 25px;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .ai-assistant-container button:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-        
-        .ai-assistant-response {
-            background-color: var(--background-mid);
-            border: 1px solid var(--background-light);
-            padding: 1.5rem;
-            border-radius: 8px;
-            white-space: pre-wrap; /* Preserves formatting */
-            color: var(--text-light);
-        }
-
-        .loading-dots {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            min-height: 2rem;
-        }
-
-        .loading-dot {
-            width: 10px;
-            height: 10px;
-            background-color: var(--primary-color);
-            border-radius: 50%;
-            animation: bounce 1.4s infinite ease-in-out;
-        }
-
-        .loading-dot:nth-child(1) { animation-delay: -0.32s; }
-        .loading-dot:nth-child(2) { animation-delay: -0.16s; }
-        .loading-dot:nth-child(3) { animation-delay: 0s; }
-
-        .hidden {
-            display: none;
-        }
-        
-        /* Welcome message pop-up */
-        #welcome-message-box {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: var(--background-mid);
-            color: var(--text-light);
-            padding: 20px 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-            z-index: 2000;
-            display: none;
-            flex-direction: column;
-            gap: 15px;
-            text-align: center;
-            border: 1px solid var(--primary-color);
-        }
-        
-        #welcome-message-box button {
-            background-color: var(--primary-color);
-            color: var(--background-dark);
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        #welcome-message-box button:hover {
-            background-color: var(--secondary-color);
-        }
-        
-        #contact-form-container {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            width: 90%;
-            max-width: 400px;
-            background-color: var(--background-mid);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
-            z-index: 1001;
-            display: none;
-            flex-direction: column;
-            gap: 15px;
-        }
-        @media (max-width: 450px) {
-            #contact-form-container {
-                right: 15px;
-                left: 15px;
-                width: auto;
-            }
-        }
-
-        #contact-form h3 {
-            color: var(--primary-color);
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-
-        #contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            text-align: left;
-        }
-
-        #contact-form label {
-            font-weight: 700;
-            color: var(--text-light);
-        }
-
-        #contact-form input, #contact-form textarea {
-            padding: 12px;
-            border: 1px solid var(--background-light);
-            border-radius: 5px;
-            font-size: 1rem;
-            background-color: var(--background-dark);
-            color: var(--text-light);
-            transition: border-color 0.3s;
-        }
-
-        #contact-form input:focus, #contact-form textarea:focus {
-            border-color: var(--primary-color);
-            outline: none;
-        }
-
-        #contact-form textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-        
-        #contact-form button {
-            background-color: var(--primary-color);
-            color: var(--background-dark);
-            border: none;
-            padding: 15px 25px;
-            border-radius: 50px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
-        }
-
-        #contact-form button:hover {
-            background-color: var(--secondary-color);
-            color: var(--background-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 0 15px rgba(46, 204, 113, 0.5);
-        }
-
-        /* Floating Chat Button */
-        .chat-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-            cursor: pointer;
-            width: 60px;
-            height: 60px;
-            background-color: var(--primary-color);
-            color: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s ease, box-shadow 0.3s ease;
-        }
-
-        .chat-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
-        }
-
-        /* Chat icon styling */
-        .chat-float svg {
-            width: 32px;
-            height: 32px;
-        }
-        
-        .chat-float .new-message-badge {
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            width: 15px;
-            height: 15px;
-            background-color: red;
-            border-radius: 50%;
-            border: 2px solid var(--text-light);
-            animation: pulse-badge 2s infinite;
-        }
-
-        @keyframes pulse-badge {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.2); opacity: 0.7; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--background-mid);
-            text-align: center;
-            padding: 2rem 5%;
-            color: var(--text-dark);
-            border-top: 1px solid var(--background-light);
-        }
-        
-        /* NEW: Hamburger Menu & Responsive Navigation */
-        .nav-links-container {
-            display: flex;
-        }
-
-        .hamburger-menu {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            width: 30px;
-            height: 30px;
-            position: relative;
-            z-index: 1100;
-            transition: all 0.3s ease;
-        }
-        
-        .hamburger-menu .bar {
-            display: block;
-            width: 100%;
-            height: 3px;
-            background-color: var(--text-light);
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            margin: 6px 0;
-        }
-        
-        .hamburger-menu.active .bar:nth-child(1) {
-            transform: translateY(9px) rotate(45deg);
-        }
-        .hamburger-menu.active .bar:nth-child(2) {
-            opacity: 0;
-        }
-        .hamburger-menu.active .bar:nth-child(3) {
-            transform: translateY(-9px) rotate(-45deg);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-            }
-            nav ul {
-                display: none; /* Hide the default menu */
-            }
-            .hamburger-menu {
-                display: block; /* Show the hamburger menu on small screens */
-            }
-            .nav-links-container {
-                position: fixed;
-                top: 0;
-                right: -100%; /* Initially off-screen */
-                width: 70%;
-                max-width: 300px;
-                height: 100vh;
-                background-color: var(--background-mid);
-                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
-                transition: right 0.4s ease-in-out;
-                z-index: 1050;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-            
-            .nav-links-container.open {
-                right: 0; /* Slide in when open */
-            }
-
-            .nav-links-container ul {
-                display: flex; /* Show the list when the container is open */
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 2rem;
-                height: 100%;
-                gap: 2rem;
-            }
-            
-            .nav-links-container ul li {
-                margin: 0;
-            }
-
-            .nav-links-container ul li a {
-                font-size: 1.5rem;
-            }
-
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-            .chat-float {
-                bottom: 15px;
-                right: 15px;
-            }
-        }
-        
-        /* NEW: Contact Buttons and Flexbox Layout */
-        .contact-content {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .contact-card {
-            background-color: var(--background-mid);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-        }
-        
-        /* Contact button group for side-by-side buttons */
-        .contact-buttons-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            width: 100%;
-        }
-
-        .contact-button {
-            display: inline-block;
-            background-color: var(--background-dark);
-            color: var(--text-light);
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
-            white-space: nowrap;
-        }
-        
-        .contact-button:hover {
-            background-color: var(--background-light);
-        }
-        
-        .contact-card p {
-            margin: 0;
-            color: var(--text-dark);
-        }
-
-        .whatsapp-icon-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background-color: #2599d3;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s ease, transform 0.2s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .whatsapp-icon-button:hover {
-            background-color: #1ebe5d;
-            transform: translateY(-2px);
-        }
-
-        /* New button for Facebook */
-        .facebook-icon-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background-color: #3b5998;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s ease, transform 0.2s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .facebook-icon-button:hover {
-            background-color: #2d4373;
-            transform: translateY(-2px);
-        }
-        
-        /* NEW: Map styles */
-        .map-container {
-            margin-top: 3rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            overflow: hidden; /* Ensures rounded corners apply to the iframe */
-        }
-        
-        .map-container iframe {
-            width: 100%;
-            height: 400px; /* Set a consistent height */
-            border: 0; /* Remove default iframe border */
-            display: block;
-        }
-        
-        /* Message box styles */
-        #message-box {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: var(--background-mid);
-            color: var(--text-light);
-            padding: 20px 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-            z-index: 2000;
-            display: none;
-            flex-direction: column;
-            gap: 15px;
-            text-align: center;
-            border: 1px solid var(--primary-color);
-        }
-
-        #message-box p {
-            margin: 0;
-        }
-
-        #message-box button {
-            background-color: var(--primary-color);
-            color: var(--background-dark);
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        #message-box button:hover {
-            background-color: var(--secondary-color);
-        }
-        
     </style>
 </head>
-<body>
-
-    <header>
-        <nav>
-            <div class="logo">
-                SULFA
-            </div>
-            <!-- Hamburger Menu Button -->
-            <button class="hamburger-menu" aria-label="Toggle navigation menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <!-- Navigation links wrapper -->
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">Who We Are</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#bundles">Our Bundles</a></li>
-                    <li><a href="#saleculator-features">Saleculator</a></li>
-                    <li><a href="#assistant">AI Assistant</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <div class="hero-text-container">
-                    <h1>SULFA Computer Technologies</h1>
-                </div>
-                <h2><span class="typing-text"></span><span class="cursor">|</span></h2>
-                <div class="hero-buttons">
-                    <a href="https://wa.me/971556625250" class="cta-button" target="_blank">Contact on WhatsApp</a>
-                    <button class="cta-button" id="play-welcome">Listen to our welcome message</button>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="section">
-            <div class="container">
-                <h2>Who We Are</h2>
-                <div class="about-text">
-                    <p>SULFA Computer Technologies is a distinguished provider of comprehensive IT solutions, established in 2017 in Abu Dhabi, UAE. We specialize in empowering businesses to thrive in the digital age through a wide range of services designed to enhance efficiency and security. Our commitment to excellence is reflected in our dedication to providing top-tier technical support and innovative solutions.</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- NEW SERVICES SECTION -->
-        <section id="services" class="section">
-            <div class="container">
-                <h2>Our Services</h2>
-                <div class="about-text">
-                    <p>We pride ourselves on our deep industry knowledge and client-centric approach. As the official Saleculator POS provider in Abu Dhabi, we have built a strong and growing customer base throughout the UAE that relies on our expertise and robust solutions. Our service portfolio includes:</p>
-                    <ul>
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg> <b>POS Solutions:</b> Offering specialized Saleculator POS systems for retail, restaurants, cafeterias, and studios.</li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-server"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg> <b>IT Support & Maintenance:</b> Providing trusted IT support, Annual Maintenance Contract (AMC) services, and CCTV maintenance.</li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hard-drive"><line x1="22" y1="12" x2="2" y2="12"></line><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" y1="16" x2="6.01" y2="16"></line><line x1="10" y1="16" x2="10.01" y2="16"></line></svg> <b>Hardware:</b> Sales and services for both new and used laptops and desktops.</li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> <b>Software Development:</b> Customized mobile and desktop application development.</li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg> <b>Web Development:</b> Professional website development services to ensure a robust online presence.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        
-        <section id="bundles" class="section">
-            <div class="container">
-                <h2>Our Bundles</h2>
-                <div class="bundles-grid">
-                    <div class="bundle-card">
-                        <h3>Professional</h3>
-                        <p class="price">5,499/-</p>
-                        <ul>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Saleculator Software Professional</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> All In One Touch POS Hardware</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Cash Drawer</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 80x80 Thermal Printer</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Wireless Keyboard and Mouse</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Standard Website</li>
-                        </ul>
-                        <!-- WhatsApp Button -->
-                        <a href="https://wa.me/971556625250?text=Hello,%20I%20am%20interested%20in%20the%20Professional%20bundle" target="_blank" class="whatsapp-btn">
-                            <span style="margin-right: 8px;">📱</span> Contact on WhatsApp
-                        </a>
-                    </div>
-                    <div class="bundle-card">
-                        <h3>Standard</h3>
-                        <p class="price">4,499/-</p>
-                        <ul>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Saleculator Software Enterprise</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> All In One Touch POS Hardware</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Cash Drawer</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 80x80 Thermal Printer</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Wireless Keyboard and Mouse</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Standard Website</li>
-                        </ul>
-                        <!-- WhatsApp Button -->
-                        <a href="https://wa.me/971556625250?text=Hello,%20I%20am%20interested%20in%20the%20Standard%20bundle" target="_blank" class="whatsapp-btn">
-                            <span style="margin-right: 8px;">📱</span> Contact on WhatsApp
-                        </a>
-                    </div>
-                    <div class="bundle-card">
-                        <h3>Basic</h3>
-                        <p class="price">3,499/-</p>
-                        <ul>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Saleculator Software Enterprise</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> (Any Mini PC With Monitor)</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Cash Drawer</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 80x80 Thermal Printer</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Wireless Keyboard and Mouse</li>
-                            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.89"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Standard Website</li>
-                        </ul>
-                        <!-- WhatsApp Button -->
-                        <a href="https://wa.me/971556625250?text=Hello,%20I%20am%20interested%20in%20the%20Basic%20bundle" target="_blank" class="whatsapp-btn">
-                            <span style="margin-right: 8px;">📱</span> Contact on WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="saleculator-features" class="section features-section">
-            <div class="container">
-                <h2>Saleculator POS Features</h2>
-                <div class="saleculator-toggle">
-                    <button id="show-saleculator-options" class="cta-button">Explore Features</button>
-                </div>
-                <div id="saleculator-options" class="saleculator-options hidden">
-                    <button id="show-retail" class="cta-button cta-small">Retail Features</button>
-                    <button id="show-restaurant" class="cta-button cta-small">Restaurant Features</button>
-                </div>
-
-                <!-- Retail Features -->
-<div id="retail-features-card" class="feature-card hidden">
-    <h3>Retail Features</h3>
-    <p>See the Saleculator capabilities that you’ll need at a retail counter.</p>
-
-    <div class="sub-section">
-        <h4>Fast Product Lookups</h4>
-        <p>Associating quick buttons to commonly sold items or using embedded barcodes, you handle any rush hour.</p>
-        <ul>
-            <li><b>Quick Keys:</b> Shortcuts that add commonly sold items with one tap. They can also be used for frequent tasks.</li>
-            <li><b>Embedded Barcodes:</b> Barcodes that contain price, quantity, or weight—commonly used for weighing items, removing manual entry.</li>
-            <li><b>Quick Search:</b> Instantly search or lookup products directly from the sell screen without changing views.</li>
-        </ul>
-    </div>
-
-    <div class="sub-section">
-        <h4>Multiple Payment Methods</h4>
-        <p>Go beyond traditional payments, split bills, and accept partial payments seamlessly.</p>
-        <ul>
-                            <li><b>Variety of Payments:</b> Accept cash, card, debit, advance, foreign currency, gift vouchers, cheques, etc.</li>
-                            <li><b>Partial Payments:</b> Accept more than one payment method per sale (e.g., part cash, part card).</li>
-                            <li><b>Bill Splitting:</b> Split a sale by items across any number of customers.</li>
-                        </ul>
-                    </div>
-
-                    <div class="sub-section">
-                        <h4>Tariff Sales</h4>
-                        <p>Tariffs or price books let you create special pricing for different customer groups.</p>
-                        <ul>
-                            <li><b>Tariffs:</b> Create multiple prices for an item, e.g., wholesale or discounted pricing for loyal customers.</li>
-                        </ul>
-                    </div>
-
-                    <div class="sub-section">
-                        <h4>Returns & Refunds</h4>
-                        <p>Process refunds or exchanges easily from the Edit Sales screen.</p>
-                        <ul>
-                            <li><b>Refund a Sale:</b> Refund full or partial sales; refunded items return to inventory.</li>
-                            <li><b>Returns:</b> Exchange items by editing a bill.</li>
-                        </ul>
-                    </div>
-
-                    <div class="sub-section">
-                        <h4>Cash Closing</h4>
-                        <p>Perform day-end or shift closing to balance your cash drawer and maintain accountability.</p>
-                        <ul>
-                            <li><b>Cash Closing:</b> Record cash and coins in the drawer, generate reports, and email summaries. Supports counter-wise and central closing.</li>
-                            <li><b>Blind Closing:</b> Cashiers enter actual cash without seeing expected balances, preventing manipulation.</li>
-                            <li><b>Partial Closing:</b> Generate sequence-numbered reports for shift handovers.</li>
-                        </ul>
-                    </div>
-
-                    <div class="sub-section">
-                        <h4>Inventory</h4>
-                        <p>Track stock, purchases, and product performance across locations.</p>
-                        <ul>
-                            <li><b>Purchase:</b> Save purchase invoices from POS and manage supplier payments.</li>
-                            <li><b>Reorder Levels:</b> Get alerts when stock runs low.</li>
-                            <li><b>Stock Transfer:</b> Transfer items easily between stores or warehouses.</li>
-                        </ul>
-                    </div>
-
-                    <div class="sub-section">
-                        <h4>Customers</h4>
-                        <p>Maintain customer records, allow credit sales, and build loyalty.</p>
-                        <ul>
-                            <li><b>Quick Creation & Lookup:</b> Add customers from the sales screen or scan loyalty cards.</li>
-                            <li><b>Customer Credits:</b> Enable debt sales and track pending balances with detailed customer diaries.</li>
-                            <li><b>Customer Loyalty:</b> Award loyalty points for purchases and allow redemption later.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                                <!-- Restaurant Features -->
-<div id="restaurant-features-card" class="feature-card hidden">
-    <h3>Restaurant Features</h3>
-    <p>Restaurants have specific needs that retail shops don’t have. Along with the Point of Sale features, here are the features your restaurant must have.</p>
-
-    <div class="sub-section">
-        <h4>Floors & Tables</h4>
-        <p>Associating quick buttons to commonly sold items or using embedded barcodes helps you handle any rush hour.</p>
-        <ul>
-                            <li><b>Quick Keys:</b> Shortcuts that add a commonly sold item to the sales ticket; can also execute frequent tasks.</li>
-                            <li><b>Embedded Barcodes:</b> Carry item price, quantity, or weight, reducing manual entry for weighing items.</li>
-                            <li><b>Quick Search:</b> Lookup products directly from the sales screen. Floor and table management ensures best service and efficient workflow.</li>
-                            <li><b>Floor & Table Management:</b> Track customers from order to bill across multiple floors and tables for optimal dining experience.</li>
-                            <li><b>Table Alerts:</b> Real-time notifications for table status.</li>
-                            <li><b>Table Shifting & Merging:</b> Move or combine tables easily during service.</li>
-                        </ul>
-                    </div>
-
-                    <div class="sub-section">
-                        <h4>Kitchen Order Printing</h4>
-                        <p>Streamline orders from POS to kitchen efficiently.</p>
-                        <ul>
-                            <li><b>Multiple Payment Methods:</b> Accept cash, card, debt, advance, foreign currency, gift vouchers, cheques, etc.</li>
-                            <li><b>Partial Payments:</b> Accept multiple payment methods per sale; collect remaining balance later.</li>
-                            <li><b>Bill Splitting:</b> Quickly split sales by item across customers.</li>
-                        </ul>
-                    </div>
-
-                    <div class="sub-section">
-                        <h4>Bill Settlement & Tariffs</h4>
-                        <ul>
-                            <li><b>Bill Settlement:</b> Apply special pricing for customers using tariffs or price books.</li>
-                            <li><b>Tariffs:</b> Create multiple prices for items based on customer category, wholesale, or loyalty discounts.</li>
-                        </ul>
-                    </div>
-
-                    <div class="sub-section">
-                        <h4>Costing</h4>
-                        <ul>
-                            <li><b>Refund a Sale:</b> Refund full or partial sales; refunded items return to inventory.</li>
-                            <li><b>Returns:</b> Exchange items by editing bills instead of refunds.</li>
-                        </ul>
-                    </div>
-
-                    <div class="sub-section">
-                        <h4>Online & PDA Orders</h4>
-                        <ul>
-                            <li>Integrate online or PDA orders into POS workflow seamlessly.</li>
-                        </ul>
-                    </div>
-
-                    <div class="sub-section">
-                        <h4>Cash Closing</h4>
-                        <ul>
-                            <li><b>Cash Closing:</b> End-of-day or shift cash balancing; counter-wise or central closing. Include notes and email reports.</li>
-                            <li><b>Blind Closing:</b> Cashier enters actual counts without seeing expected balances, preventing manipulation.</li>
-                            <li><b>Partial Closing:</b> Generate reports without removing cash, ideal for shift handovers.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="assistant" class="section ai-assistant">
-            <div class="container">
-                <h2>AI Business Assistant</h2>
-                <p style="text-align: center; color: var(--text-light);">Describe your business needs, and our AI assistant will recommend the best services for you.</p>
-                <div class="ai-assistant-container">
-                    <textarea id="ai-input" placeholder="Example: I own a small retail store and need help with managing sales and inventory."></textarea>
-                    <button id="ai-submit">Get Recommendations</button>
-                    <div id="ai-loading" class="loading-dots hidden">
-                        <div class="loading-dot"></div>
-                        <div class="loading-dot"></div>
-                        <div class="loading-dot"></div>
-                    </div>
-                    <div id="ai-response" class="ai-assistant-response hidden"></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <p style="max-width: 800px; margin: auto; text-align: center;">We’re here to help. Get help with choosing SULFA, or ask about a previous purchase.</p>
-                <div class="contact-content">
-                    <div class="contact-card">
-                        <h3>Chat with us</h3>
-                        <p>We've got live Social Experts waiting to help you Monday to Friday from 9am to 5pm EST.</p>
-                        <!-- New button group to hold social buttons -->
-                        <div class="contact-buttons-group">
-                            <a href="https://wa.me/971556625250?text=Hello,%20I%20am%20interested%20in%20%20I Would like to know more about your offer%20bundle" target="_blank" class="whatsapp-icon-button">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle">
-                                    <path d="M21 11.5a8.38 8.38 0 0 1-.95 4.39 8.5 8.5 0 0 1-5.75 3.82L12 21.5a1 1 0 0 1-1.39-.77L10.3 16a8.5 8.5 0 0 1-5.75-3.82 8.38 8.38 0 0 1-.95-4.39 8.5 8.5 0 0 1 8.5-8.5 8.5 8.5 0 0 1 8.5 8.5z" />
-                                </svg>
-                                <span>WhatsApp Chat</span>
-                            </a>
-                            <a href="https://www.facebook.com/sulfacomputertechnology" target="_blank" class="facebook-icon-button">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
-                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                                </svg>
-                                <span>Facebook Page</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <h3>Email Us</h3>
-                        <p>Drop us an email at:</p>
-                        <a href="mailto:sales@sulfa.com" class="contact-button">Sales: sales@sulfa.com</a>
-                        <a href="mailto:support@sulfa.com" class="contact-button">Support: support@sulfa.com</a>
-                    </div>
-                    <div class="contact-card">
-                        <h3>Give us a call</h3>
-                        <p>Give us a ring. Our Experts are standing by Monday to Friday from 9am to 5pm EST.</p>
-                        <a href="tel:+971556625250" class="contact-button">+971 55 662 5250</a>
-                    </div>
-                </div>
-                <!-- Google Map container -->
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232565.41896995564!2d54.39381147329352!3d24.387054129172736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e440f723ef2b9%3A0xc7cc2e9341971108!2sAbu%20Dhabi!5e0!3m2!1sen!2sae!4v1756111213748!5m2!1sen!2sae" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div id="welcome-message-box" class="hidden">
-        <h3>Welcome to SULFA Computer Technologies</h3>
-        <p>Hi there! We’re here to assist you. To help us serve you better, could you please provide your email and phone number?</p>
-        <p>For support, you can reach our team directly on <a href="mailto:support@sulfacomputertechnologies.com">support@sulfacomputertechnologies.com</a> Or <a href="tel:+971556625250">+971556625250</a></p>
-        <button id="dismiss-welcome-btn">OK</button>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 SULFA Computer Technologies. All Rights Reserved.</p>
-    </footer>
-
-    <div id="message-box" class="hidden">
-        <p id="message-box-text"></p>
-        <button id="message-box-button">OK</button>
-    </div>
-
-    <!-- Floating Chat Button -->
-    <div class="chat-float">
-        <button id="toggle-chat-btn" aria-label="Open chat window">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.95 4.39 8.5 8.5 0 0 1-5.75 3.82L12 21.5a1 1 0 0 1-1.39-.77L10.3 16a8.5 8.5 0 0 1-5.75-3.82 8.38 8.38 0 0 1-.95-4.39 8.5 8.5 0 0 1 8.5-8.5 8.5 8.5 0 0 1 8.5 8.5z" />
-            </svg>
-        </button>
-    </div>
+<body class="corporate-gradient-bg text-slate-100 font-active-en antialiased tech-circuit-lines min-h-screen">
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const typingElement = document.querySelector('.typing-text');
-            const phrases = ["Your Partner in IT Solutions.", "Empowering Your Business.", "Saleculator POS Provider in Abu Dhabi."];
-            let phraseIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            let typingSpeed = 100;
-            let delayBetweenPhrases = 2000;
+        // Dictionary matrix covering the full-spectrum of Info Center Trading inspired services & solutions
+        const dictMatrix = {
+            en: {
+                brandName: "SULFA",
+                brandTitle: "Computer Technology",
+                navHome: "Home",
+                navDivisions: "IT Divisions",
+                navDemo: "Interactive POS",
+                navPlanner: "System Planner",
+                navPartner: "Global Partners",
+                navContact: "Connect",
+                
+                heroPreTitle: "PREMIER VALUE-ADDED RESELLER & SYSTEMS INTEGRATOR",
+                heroTitle: "Enterprise IT Systems, Networks & All-In-One Solutions",
+                heroSub: "SULFA Computer Technology LLC delivers complete infrastructure across the UAE. From complex high-performance server farms and certified optical fiber cabling, to advanced surveillance compliance and intelligent enterprise-grade POS environments.",
+                btnHeroPlanner: "Launch System Planner",
+                btnHeroServices: "Explore Core Divisions",
+                tagAbuDhabi: "Abu Dhabi Corporate Office",
+                tagFta: "100% FTA Tax Compliant Setup",
+                
+                divHeading: "Enterprise IT Solutions & Trading Divisions",
+                divSub: "We architect, secure, and maintain complex digital systems for corporate offices, retail hubs, and industrial environments.",
+                
+                divT1: "Infrastructure & Server Datacenters",
+                divD1: "Deployment of multi-core servers, rack configurations, fault-tolerant SAN/NAS storage, virtualized host environments, and intelligent backup UPS arrays.",
+                divT2: "Structured Copper & Fiber Cabling",
+                divD2: "CAT6/CAT6A data trunks, single/multi-mode commercial fiber splicing, complete cabinet patch arrays, and certified Fluke or OTDR documentation.",
+                divT3: "Biometrics, PABX & Unified Voice",
+                divD3: "Enterprise IP Telephony (VoIP), hybrid analog PABX systems, digital video conferencing hubs, face recognition scanners, and door access units.",
+                divT4: "CCTV Systems & Security Compliance",
+                divD4: "State-of-the-art security installations fully aligned with ADJD/MCC requirements, high-definition IP tracking cameras, and cloud storage setups.",
+                divT5: "Corporate SLAs & AMC Maintenance",
+                divD5: "Predictive site visits, round-the-clock remote IT helpdesks, physical logic board diagnostic support, and on-site spare part replacements.",
+                divT6: "All-in-One Retail POS & Web Engines",
+                divD6: "Bespoke checkout database setups, secure local/cloud VAT sync, custom enterprise API middleware, and modern retail software environments.",
 
-            function typeWriter() {
-                const currentPhrase = phrases[phraseIndex];
-                if (isDeleting) {
-                    typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
-                    charIndex--;
-                    typingSpeed = 50;
+                simHeading: "All-In-One POS Experience Terminal",
+                simSub: "Interact with SULFA's dynamic retail terminal simulator. Register customized components, compute UAE VAT (5%), and evaluate real-time hardware billing layouts.",
+                simCatAll: "Enterprise Retail Assets Menu",
+                simTax: "UAE VAT (5%)",
+                simTotal: "Total Amount",
+                simBtnPrint: "Print Sample Invoice",
+                simReceiptHeader: "SULFA COMPUTER TECHNOLOGY LLC",
+                simReceiptAddress: "Mussafah, Abu Dhabi, UAE",
+                simReceiptPh: "Tel: +971 56 662 2885",
+                simReceiptSlip: "OFFICIAL RETAIL MOCK RECEIPT",
+                simReceiptThank: "Built to Empower UAE Commercial Hubs",
+                simAddSuccess: "Asset registered in POS Terminal!",
+
+                cfgHeading: "Interactive Cost Planner & System Architect",
+                cfgSub: "Configure your enterprise service package, choose your hardware bundles, and immediately generate a digital dispatch proposal for our engineers.",
+                cfgLabelTier: "1. Select Service Package Tier",
+                cfgTierBasic: "Basic Hardware Bundle",
+                cfgTierBasicD: "Excellent starter configuration including terminal hardware, standard firmware, and basic local billing capacity.",
+                cfgTierStd: "Standard Software Edition",
+                cfgTierStdD: "Rich reporting dashboards, cloud-synced stock controllers, offline protection, and advanced user privilege structures.",
+                cfgTierPro: "Professional Enterprise Setup",
+                cfgTierProD: "Multi-branch database synchronization, ERP integrations, customized API middleware, and enterprise warehouses tracking.",
+                cfgContactAgent: "Contact Our Agent",
+                
+                cfgLabelIndustry: "2. Tell Us Your Operational Domain",
+                cfgIndRetail: "Supermarket, Pharmacy & General Retail",
+                cfgIndFnb: "Premium Restaurant, Cafe & F&B Hub",
+                cfgIndCorp: "Corporate Workspace, Offices & Datacenters",
+                
+                cfgHardware: "Additional Infrastructure Add-ons",
+                cfgA1: "High-Speed Thermal Receipt Printer (80mm)",
+                cfgA2: "Durable Omni-Directional Laser Barcode Scanner",
+                cfgA3: "CCTV Camera Surveillance Bundle",
+                cfgA3Price: "Contact for Site Visit",
+                cfgA4: "Add Annual IT AMC Maintenance Support SLA",
+                cfgSummaryTitle: "Estimated System Configuration Plan",
+                cfgSummarySub: "Instant itemized breakdown of selected items",
+                cfgSumTier: "Selected Core Package:",
+                cfgSumInd: "Operational Sector:",
+                cfgSumAddons: "Hardware Extras Total:",
+                cfgSumLicensing: "Operational IT Support SLA:",
+                cfgSumGrand: "Total Estimated Investment:",
+                cfgBtnWhatsApp: "Submit Requirements to SULFA Support Desk",
+                
+                footAddress: "Mussafah, Sector M-13, Abu Dhabi, United Arab Emirates",
+                footHours: "Corporate Hours: Saturday - Thursday (9:00 AM - 9:00 PM)",
+                footRights: "© 2026 SULFA Computer Technology LLC. All Rights Reserved.",
+                footReviewCount: "Excellent Customer Feedback on Google Reviews"
+            },
+            ar: {
+                brandName: "سلفا",
+                brandTitle: "كمبيوتر تكنولوجي",
+                navHome: "الرئيسية",
+                navDivisions: "أقسام التكنولوجيا",
+                navDemo: "جهاز نقاط البيع",
+                navPlanner: "مخطط التكلفة",
+                navPartner: "شركاؤنا الدوليون",
+                navContact: "اتصل بنا",
+                
+                heroPreTitle: "الموزع المعتمد ومكامل الأنظمة الرائد في الإمارات",
+                heroTitle: "أنظمة تكنولوجيا المعلومات، الشبكات والحلول المتكاملة",
+                heroSub: "تقدم شركة سلفا للكمبيوتر والتكنولوجيا ذ.م.م خدمات بنية تحتية متكاملة لقطاع الأعمال في دولة الإمارات. من تزويد غرف الخوادم المعقدة، شبكات الألياف الضوئية المعتمدة، إلى كاميرات المراقبة المطابقة للمواصفات الحكومية وأنظمة نقاط البيع والكاشير المتقدمة.",
+                btnHeroPlanner: "تشغيل مخطط التكلفة التفاعلي",
+                btnHeroServices: "استكشف الأقسام الرئيسية",
+                tagAbuDhabi: "المكتب الإداري - مصفح، أبوظبي",
+                tagFta: "أنظمة مطابقة لهيئة الضرائب الاتحادية 100%",
+                
+                divHeading: "أقسام حلول تكنولوجيا المعلومات المتكاملة",
+                divSub: "نقوم بتصميم، تأمين، وصيانة الأنظمة الرقمية والشبكات لبيئات العمل والشركات والمؤسسات التجارية في أبوظبي.",
+                
+                divT1: "مراكز البيانات وتجهيز الخوادم",
+                divD1: "توريد وتركيب الخوادم متعددة النواة، إعداد كبائن الـ Racks، وتوفير أجهزة التخزين الاحتياطية SAN/NAS وأنظمة طاقة الحماية UPS الفعالة.",
+                divT2: "شبكات الاتصال النحاسية والألياف الضوئية",
+                divD2: "تركيب كابلات CAT6/CAT6A، لحام وتوصيل الألياف الضوئية التجارية للمباني، مع فحص وتوثيق الأنظمة بجودة Fluke و OTDR.",
+                divT3: "أنظمة الاتصال الهاتفي والتحكم بالدخول",
+                divD3: "تجهيز السنترالات الهجينة والـ IP Telephony (VoIP)، وربط أجهزة الحضور والانصراف بالبصمة وأجهزة التحكم بالأبواب الأمنية والاجتماعات المرئية.",
+                divT4: "أنظمة المراقبة الأمنية المعتمدة",
+                divD4: "تركيب وتأسيس شبكات كاميرات المراقبة عالية الدقة IP بالكامل بما يتطابق مع شروط وضوابط الجهات المعنية ADJD/MCC.",
+                divT5: "عقود الصيانة والدعم الفني السنوي (AMC)",
+                divD5: "زيارات صيانة وقائية دورية، خط مساعدة فني مباشر على مدار الساعة للشركات، صيانة قطع الغيار اللوحية المعقدة، والتبديل الفوري.",
+                divT6: "أنظمة نقاط البيع وحلول البرمجيات المخصصة",
+                divD6: "إعداد قواعد بيانات سحابية متكاملة للمبيعات والمخزون، تفعيل حساب ضريبة القيمة المضافة UAE VAT تلقائياً، والربط البرمجي المخصص بالكامل.",
+
+                simHeading: "جهاز محاكاة الكاشير ونقاط البيع التفاعلي",
+                simSub: "اختبر شاشة مبيعات سلفا التفاعلية. أضف المنتجات، واحتسب الضريبة الاتحادية (5%) واطبع إيصالك التجريبي على الفور.",
+                simCatAll: "قائمة أجهزة وحلول التجزئة السريعة",
+                simTax: "ضريبة القيمة المضافة (5%)",
+                simTotal: "المبلغ الإجمالي المجمع",
+                simBtnPrint: "طباعة الفاتورة الافتراضية",
+                simReceiptHeader: "شركة سلفا للكمبيوتر والتكنولوجيا ذ.م.م",
+                simReceiptAddress: "مصفح، أبوظبي، الإمارات العربية المتحدة",
+                simReceiptPh: "هاتف: +971 56 662 2885",
+                simReceiptSlip: "إيصال تجريبي افتراضي - نظام نقاط البيع",
+                simReceiptThank: "بنيت خصيصاً لخدمة الأسواق التجارية في الإمارات",
+                simAddSuccess: "تمت إضافة الصنف إلى شاشة الفاتورة!",
+
+                cfgHeading: "مخطط التكلفة التفاعلي وحساب الأسعار",
+                cfgSub: "اختر مستوى الباقة المناسبة لك، وحدد الإضافات والملحقات اللازمة، لتوليد عرض مالي فوري وإرساله مباشرة لخبراء المبيعات في أبوظبي.",
+                cfgLabelTier: "١. اختر باقة الخدمة والبرمجيات",
+                cfgTierBasic: "الحزمة الأساسية المتكاملة",
+                cfgTierBasicD: "خيار رائع يتضمن الأجهزة الأساسية، ونظام المبيعات المدمج، والقدرة على إصدار الفواتير الفورية المطابقة.",
+                cfgTierStd: "الباقة القياسية المتطورة",
+                cfgTierStdD: "تقارير تحليلية ذكية، تزامن المخزون السحابي، الحماية ضد انقطاع الشبكة، وإمكانية تخصيص صلاحيات البائعين.",
+                cfgTierPro: "حزمة الشركات وحلول الربط البرمجي",
+                cfgTierProD: "تزامن الفروع المتعددة، مكاملة أنظمة الـ ERP، ربط الواجهات البرمجية (APIs)، وإدارة مستودعات ضخمة بكفاءة تامة.",
+                cfgContactAgent: "تواصل مع خدمة العملاء",
+                
+                cfgLabelIndustry: "٢. نوع النشاط والقطاع التجاري",
+                cfgIndRetail: "السوبرماركت، الصيدليات، ومحلات التجزئة العامة",
+                cfgIndFnb: "المطاعم الراقية، المقاهي ومنافذ المأكولات والمشروبات",
+                cfgIndCorp: "مكاتب الشركات، مساحات العمل وغرف الخوادم المركزية",
+                
+                cfgHardware: "الملحقات والقطع العتادية الإضافية",
+                cfgA1: "طابعة فواتير حرارية سريعة (عرض ٨٠ ملم)",
+                cfgA2: "قارئ باركود ليزري عالي الحساسية ومتعدد الاتجاهات",
+                cfgA3: "حزمة كاميرات المراقبة والأنظمة الأمنية",
+                cfgA3Price: "تواصل للمعاينة الميدانية",
+                cfgA4: "إضافة عقد الدعم الفني والصيانة السنوية (AMC)",
+                cfgSummaryTitle: "التكلفة التقديرية المقترحة",
+                cfgSummarySub: "تفصيل فوري وتلقائي للأسعار والخدمات المحددة",
+                cfgSumTier: "باقة الخدمة الأساسية:",
+                cfgSumInd: "القطاع التجاري المستهدف:",
+                cfgSumAddons: "مجموع تكلفة الإضافات العتادية:",
+                cfgSumLicensing: "عقد الدعم والتشغيل السنوي:",
+                cfgSumGrand: "التكلفة الإجمالية التقديرية للحزمة:",
+                cfgBtnWhatsApp: "إرسال المواصفات المطلوبة لفريق المبيعات والدعم",
+                
+                footAddress: "مصفح، م-١٣، أبوظبي، دولة الإمارات العربية المتحدة",
+                footHours: "ساعات العمل الرسمية: السبت إلى الخميس (٩:٠٠ صباحاً - ٩:٠٠ مساءً)",
+                footRights: "جميع الحقوق محفوظة © ٢٠٢٦ لشركة سلفا للكمبيوتر والتكنولوجيا ذ.م.م.",
+                footReviewCount: "تقييمات متميزة على محرك بحث وجوجل مابز"
+            }
+        };
+
+        let activeBilingualLang = 'en';
+    </script>
+
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-brandDark-950/90 border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Branding Container -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="relative w-11 h-11 flex items-center justify-center rounded-xl bg-gradient-to-br from-techBlue-500 to-techBlue-600 p-0.5 shadow-neon-glow transition duration-300 group-hover:scale-105">
+                        <div class="bg-brandDark-950 rounded-[10px] w-full h-full flex items-center justify-center">
+                            <!-- SVG Replica of logo icon -->
+                            <svg class="w-6 h-6 text-techBlue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="text-xl font-extrabold tracking-wider text-white font-sans drop-shadow-md" data-i18n="brandName">SULFA</span>
+                            <span class="text-[10px] tracking-widest text-techBlue-400 font-mono font-bold uppercase py-0.5 px-1.5 rounded bg-techBlue-500/10 border border-techBlue-500/20">LLC</span>
+                        </div>
+                        <p class="text-[10px] text-slate-400 uppercase tracking-widest font-mono" data-i18n="brandTitle">Computer Technology</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="#home" class="text-sm font-medium text-slate-300 hover:text-white transition" data-i18n="navHome">Home</a>
+                    <a href="#divisions" class="text-sm font-medium text-slate-300 hover:text-white transition" data-i18n="navDivisions">IT Divisions</a>
+                    <a href="#demo" class="text-sm font-medium text-slate-300 hover:text-white transition" data-i18n="navDemo">Interactive POS</a>
+                    <a href="#planner" class="text-sm font-medium text-slate-300 hover:text-white transition" data-i18n="navPlanner">System Planner</a>
+                    <a href="#partners" class="text-sm font-medium text-slate-300 hover:text-white transition" data-i18n="navPartner">Global Partners</a>
+                </nav>
+
+                <!-- Language Switching & Contact CTA -->
+                <div class="flex items-center gap-4">
+                    <button onclick="toggleGlobalLanguage()" class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-xs font-bold rounded-lg group bg-gradient-to-br from-techBlue-500 to-techBlue-700 hover:text-white text-white focus:ring-4 focus:outline-none focus:ring-sky-900 transition">
+                        <span class="relative px-3.5 py-1.5 transition-all ease-in duration-75 bg-brandDark-950 rounded-md group-hover:bg-opacity-0">
+                            <span id="langTextLabel">العربية</span>
+                        </span>
+                    </button>
+                    <!-- Quick Call Action -->
+                    <a href="tel:+971566622885" class="hidden sm:flex items-center gap-2 bg-gradient-to-r from-techBlue-600 to-techBlue-500 hover:from-techBlue-500 hover:to-techBlue-400 text-brandDark-950 font-bold px-4 py-2 rounded-lg text-xs transition duration-200">
+                        <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+                        <span class="font-mono" dir="ltr">+971 56 662 2885</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="home" class="relative overflow-hidden pt-10 pb-16 lg:pt-16 lg:pb-24">
+        <!-- Glowing background matrices with click transparency to support visibility -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-techBlue-500/10 rounded-full blur-[140px] pointer-events-none z-0"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Narrative Area -->
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left rtl:lg:text-right relative z-20">
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+                        <span class="inline-flex items-center gap-1.5 py-1 px-3 rounded-full text-xs font-bold bg-techBlue-950/60 text-techBlue-400 border border-techBlue-500/20">
+                            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-techBlue-400"></i>
+                            <span data-i18n="tagAbuDhabi">Abu Dhabi Corporate Office</span>
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 py-1 px-3 rounded-full text-xs font-bold bg-slate-800/60 text-emerald-400 border border-slate-700">
+                            <i data-lucide="file-check" class="w-3.5 h-3.5 text-emerald-400"></i>
+                            <span data-i18n="tagFta">100% FTA Tax Compliant Setup</span>
+                        </span>
+                    </div>
+
+                    <!-- Verified Visible Text Rendering -->
+                    <div class="space-y-4">
+                        <p class="text-xs sm:text-sm font-black uppercase tracking-[0.18em] text-techBlue-500 font-mono" data-i18n="heroPreTitle">
+                            PREMIER VALUE-ADDED RESELLER & SYSTEMS INTEGRATOR
+                        </p>
+                        <!-- Explicit bright color applied to ensure visibility, with drop shadow for depth -->
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-techBlue-400 drop-shadow-lg font-sans" data-i18n="heroTitle">
+                            Enterprise IT Systems, Networks & All-In-One Solutions
+                        </h1>
+                    </div>
+
+                    <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-sans" data-i18n="heroSub">
+                        SULFA Computer Technology LLC delivers complete infrastructure across the UAE. From complex high-performance server farms and certified optical fiber cabling, to advanced surveillance compliance and intelligent enterprise-grade POS environments.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#planner" class="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-r from-techBlue-600 to-techBlue-500 hover:from-techBlue-500 hover:to-techBlue-400 text-brandDark-950 font-bold text-sm shadow-neon-glow transform hover:-translate-y-0.5 transition duration-200">
+                            <span data-i18n="btnHeroPlanner">Launch System Planner</span>
+                        </a>
+                        <a href="#divisions" class="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-sm border border-slate-700 transition duration-200">
+                            <span data-i18n="btnHeroServices">Explore Core Divisions</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Brand Graphic & Live Image Area -->
+                <div class="lg:col-span-5 relative z-10">
+                    <div class="relative mx-auto max-w-[450px] lg:max-w-none">
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-techBlue-500 to-sky-600 rounded-3xl blur opacity-30 transition duration-1000"></div>
+                        
+                        <div class="relative bg-brandDark-900 border border-slate-800 rounded-2xl p-6 shadow-2xl">
+                            <!-- Localized brand logo component with fallback -->
+                            <div class="rounded-xl overflow-hidden bg-brandDark-950 border border-slate-800 p-6 flex flex-col items-center justify-center min-h-[300px] relative">
+                                <div id="logoVisualContainer" class="w-full h-full flex flex-col items-center justify-center">
+                                    <img src="F2FA2F48-DF04-44E5-B047-4A77A3BD6434.png" alt="SULFA Computer Technology Logo" class="max-w-full h-auto object-contain rounded-lg shadow-lg mb-4" onerror="activateLogoFallbackGraphic()">
+                                </div>
+                                
+                                <script>
+                                    function activateLogoFallbackGraphic() {
+                                        const logoDiv = document.getElementById('logoVisualContainer');
+                                        if (logoDiv) {
+                                            logoDiv.innerHTML = `
+                                                <div class="text-center py-6">
+                                                    <svg class="w-36 h-36 mx-auto text-techBlue-400 drop-shadow-neon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M10 50 H90 M15 30 H85 M15 70 H85" stroke="rgba(14, 165, 233, 0.12)" stroke-width="2"/>
+                                                        <rect x="25" y="20" width="50" height="35" rx="4" fill="#0c131f" stroke="#0ea5e9" stroke-width="2.5"/>
+                                                        <rect x="28" y="23" width="44" height="29" rx="2" fill="#1b2536"/>
+                                                        <path d="M42 55 L38 72 H62 L58 55 Z" fill="#0284c7" stroke="#0ea5e9" stroke-width="1.5"/>
+                                                        <rect x="20" y="70" width="60" height="15" rx="3" fill="#0f172a" stroke="#0284c7" stroke-width="2"/>
+                                                        <circle cx="50" cy="37" r="6" fill="#0ea5e9" fill-opacity="0.2"/>
+                                                        <path d="M48 37 L50 35 L52 37 L50 39 Z" fill="#38bdf8"/>
+                                                    </svg>
+                                                    <p class="text-[10px] text-slate-500 font-mono tracking-widest mt-4 uppercase">SULFA IT Solutions Integration</p>
+                                                </div>
+                                            `;
+                                        }
+                                    }
+                                </script>
+                            </div>
+
+                            <!-- Integrated Stats Matrix -->
+                            <div class="grid grid-cols-3 gap-2 mt-4 text-center">
+                                <div class="bg-brandDark-950 p-3 rounded-lg border border-slate-800/80">
+                                    <p class="text-lg font-bold text-techBlue-400 font-mono">2017</p>
+                                    <p class="text-[9px] uppercase tracking-wider text-slate-400">Established</p>
+                                </div>
+                                <div class="bg-brandDark-950 p-3 rounded-lg border border-slate-800/80">
+                                    <p class="text-lg font-bold text-techBlue-400 font-mono">1500+</p>
+                                    <p class="text-[9px] uppercase tracking-wider text-slate-400">Clients Served</p>
+                                </div>
+                                <div class="bg-brandDark-950 p-3 rounded-lg border border-slate-800/80">
+                                    <p class="text-lg font-bold text-techBlue-400 font-mono">99.9%</p>
+                                    <p class="text-[9px] uppercase tracking-wider text-slate-400">SLA Uptime</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <section id="divisions" class="py-20 bg-brandDark-950 border-t border-b border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs font-bold tracking-widest text-techBlue-400 uppercase font-mono">COMPLETE CAPABILITIES MATRIX</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white" data-i18n="divHeading">Enterprise IT Solutions & Trading Divisions</h2>
+                <p class="text-slate-400 text-sm sm:text-base" data-i18n="divSub">We architect, secure, and maintain complex digital systems for corporate offices, retail hubs, and industrial environments.</p>
+            </div>
+
+            <!-- Divisions Matrix Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-brandDark-900/60 border border-slate-800 rounded-2xl p-6 hover:border-techBlue-500/50 hover:shadow-neon-glow transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-techBlue-500/10 border border-techBlue-500/20 flex items-center justify-center mb-6 text-techBlue-400">
+                        <i data-lucide="server" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3" data-i18n="divT1">Infrastructure & Server Datacenters</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="divD1">Deployment of multi-core servers, rack configurations, fault-tolerant SAN/NAS storage, virtualized host environments, and intelligent backup UPS arrays.</p>
+                </div>
+
+                <div class="bg-brandDark-900/60 border border-slate-800 rounded-2xl p-6 hover:border-techBlue-500/50 hover:shadow-neon-glow transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-techBlue-500/10 border border-techBlue-500/20 flex items-center justify-center mb-6 text-techBlue-400">
+                        <i data-lucide="cable" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3" data-i18n="divT2">Structured Copper & Fiber Cabling</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="divD2">CAT6/CAT6A data trunks, single/multi-mode commercial fiber splicing, complete cabinet patch arrays, and certified Fluke or OTDR documentation.</p>
+                </div>
+
+                <div class="bg-brandDark-900/60 border border-slate-800 rounded-2xl p-6 hover:border-techBlue-500/50 hover:shadow-neon-glow transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-techBlue-500/10 border border-techBlue-500/20 flex items-center justify-center mb-6 text-techBlue-400">
+                        <i data-lucide="phone-call" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3" data-i18n="divT3">Biometrics, PABX & Unified Voice</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="divD3">Enterprise IP Telephony (VoIP), hybrid analog PABX systems, digital video conferencing hubs, face recognition scanners, and door access units.</p>
+                </div>
+
+                <div class="bg-brandDark-900/60 border border-slate-800 rounded-2xl p-6 hover:border-techBlue-500/50 hover:shadow-neon-glow transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-techBlue-500/10 border border-techBlue-500/20 flex items-center justify-center mb-6 text-techBlue-400">
+                        <i data-lucide="shield" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3" data-i18n="divT4">CCTV Systems & Security Compliance</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="divD4">State-of-the-art security installations fully aligned with ADJD/MCC requirements, high-definition IP tracking cameras, and cloud storage setups.</p>
+                </div>
+
+                <div class="bg-brandDark-900/60 border border-slate-800 rounded-2xl p-6 hover:border-techBlue-500/50 hover:shadow-neon-glow transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-techBlue-500/10 border border-techBlue-500/20 flex items-center justify-center mb-6 text-techBlue-400">
+                        <i data-lucide="clock-4" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3" data-i18n="divT5">Corporate SLAs & AMC Maintenance</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="divD5">Predictive site visits, round-the-clock remote IT helpdesks, physical logic board diagnostic support, and on-site spare part replacements.</p>
+                </div>
+
+                <div class="bg-brandDark-900/60 border border-slate-800 rounded-2xl p-6 hover:border-techBlue-500/50 hover:shadow-neon-glow transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-techBlue-500/10 border border-techBlue-500/20 flex items-center justify-center mb-6 text-techBlue-400">
+                        <i data-lucide="code" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3" data-i18n="divT6">All-in-One Retail POS & Web Engines</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="divD6">Bespoke checkout database setups, secure local/cloud VAT sync, custom enterprise API middleware, and modern retail software environments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="py-20 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs font-bold tracking-widest text-techBlue-400 uppercase font-mono">SIMULATION STATION</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white" data-i18n="simHeading">All-In-One POS Experience Terminal</h2>
+                <p class="text-slate-400 text-sm sm:text-base" data-i18n="simSub">Interact with SULFA's dynamic retail terminal simulator. Register customized components, compute UAE VAT (5%), and evaluate real-time hardware billing layouts.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Front-End Quick Keys (Left Panel) -->
+                <div class="lg:col-span-7 bg-brandDark-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-800 mb-6">
+                            <h3 class="text-sm font-bold uppercase tracking-wider text-techBlue-400 font-mono" data-i18n="simCatAll">Enterprise Retail Assets Menu</h3>
+                            <span class="px-2 py-1 rounded bg-brandDark-950 text-slate-400 text-xs font-bold font-mono border border-slate-800">SULFA ST-120 Terminal</span>
+                        </div>
+
+                        <!-- Grid Options -->
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                            <button onclick="addSimItem('SULFA Touch POS Terminal', 2200)" class="bg-brandDark-950 border border-slate-800 hover:border-techBlue-500 p-4 rounded-xl flex flex-col items-center justify-between text-center transition-all duration-200 group">
+                                <span class="w-10 h-10 rounded-lg bg-techBlue-950 text-techBlue-400 flex items-center justify-center mb-3 group-hover:scale-105 transition-all">
+                                    <i data-lucide="monitor" class="w-5 h-5"></i>
+                                </span>
+                                <span class="text-xs font-bold text-slate-200 group-hover:text-white leading-snug">POS Terminal</span>
+                                <span class="text-xs font-mono font-black text-techBlue-400 mt-2" dir="ltr">2,200 AED</span>
+                            </button>
+                            <button onclick="addSimItem('Thermal Receipt Printer 80mm', 450)" class="bg-brandDark-950 border border-slate-800 hover:border-techBlue-500 p-4 rounded-xl flex flex-col items-center justify-between text-center transition-all duration-200 group">
+                                <span class="w-10 h-10 rounded-lg bg-techBlue-950 text-techBlue-400 flex items-center justify-center mb-3 group-hover:scale-105 transition-all">
+                                    <i data-lucide="printer" class="w-5 h-5"></i>
+                                </span>
+                                <span class="text-xs font-bold text-slate-200 group-hover:text-white leading-snug">Thermal Printer</span>
+                                <span class="text-xs font-mono font-black text-techBlue-400 mt-2" dir="ltr">450 AED</span>
+                            </button>
+                            <button onclick="addSimItem('Heavy-Duty Steel Cash Drawer', 350)" class="bg-brandDark-950 border border-slate-800 hover:border-techBlue-500 p-4 rounded-xl flex flex-col items-center justify-between text-center transition-all duration-200 group">
+                                <span class="w-10 h-10 rounded-lg bg-techBlue-950 text-techBlue-400 flex items-center justify-center mb-3 group-hover:scale-105 transition-all">
+                                    <i data-lucide="archive" class="w-5 h-5"></i>
+                                </span>
+                                <span class="text-xs font-bold text-slate-200 group-hover:text-white leading-snug">Cash Drawer</span>
+                                <span class="text-xs font-mono font-black text-techBlue-400 mt-2" dir="ltr">350 AED</span>
+                            </button>
+                            <button onclick="addSimItem('Omni-Directional Laser Scanner', 350)" class="bg-brandDark-950 border border-slate-800 hover:border-techBlue-500 p-4 rounded-xl flex flex-col items-center justify-between text-center transition-all duration-200 group">
+                                <span class="w-10 h-10 rounded-lg bg-techBlue-950 text-techBlue-400 flex items-center justify-center mb-3 group-hover:scale-105 transition-all">
+                                    <i data-lucide="scan" class="w-5 h-5"></i>
+                                </span>
+                                <span class="text-xs font-bold text-slate-200 group-hover:text-white leading-snug">Laser Scanner</span>
+                                <span class="text-xs font-mono font-black text-techBlue-400 mt-2" dir="ltr">350 AED</span>
+                            </button>
+                            <button onclick="addSimItem('IT Infrastructure AMC Service', 99)" class="bg-brandDark-950 border border-slate-800 hover:border-techBlue-500 p-4 rounded-xl flex flex-col items-center justify-between text-center transition-all duration-200 group">
+                                <span class="w-10 h-10 rounded-lg bg-techBlue-950 text-techBlue-400 flex items-center justify-center mb-3 group-hover:scale-105 transition-all">
+                                    <i data-lucide="check-square" class="w-5 h-5"></i>
+                                </span>
+                                <span class="text-xs font-bold text-slate-200 group-hover:text-white leading-snug">IT Support SLA</span>
+                                <span class="text-xs font-mono font-black text-techBlue-400 mt-2" dir="ltr">99 AED</span>
+                            </button>
+                            <button onclick="addSimItem('Premium Server Backups', 400)" class="bg-brandDark-950 border border-slate-800 hover:border-techBlue-500 p-4 rounded-xl flex flex-col items-center justify-between text-center transition-all duration-200 group">
+                                <span class="w-10 h-10 rounded-lg bg-techBlue-950 text-techBlue-400 flex items-center justify-center mb-3 group-hover:scale-105 transition-all">
+                                    <i data-lucide="database" class="w-5 h-5"></i>
+                                </span>
+                                <span class="text-xs font-bold text-slate-200 group-hover:text-white leading-snug">Server Backup</span>
+                                <span class="text-xs font-mono font-black text-techBlue-400 mt-2" dir="ltr">400 AED</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Simulator Alert Toast -->
+                    <div id="simulatorFeedbackToast" class="opacity-0 translate-y-2 pointer-events-none mt-4 p-3.5 bg-techBlue-950 border border-techBlue-500/30 text-techBlue-300 rounded-xl text-center text-xs font-semibold transition-all duration-300">
+                        <span data-i18n="simAddSuccess">Asset registered in POS Terminal!</span>
+                    </div>
+                </div>
+
+                <!-- Live Customer Invoice Print Ledger (Right Panel) -->
+                <div class="lg:col-span-5 bg-brandDark-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-800 mb-4">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest font-mono">Invoice Terminal</span>
+                            <button onclick="clearSimCart()" class="text-[10px] text-red-400 hover:text-red-300 transition uppercase font-bold tracking-wider">Reset Screen</button>
+                        </div>
+
+                        <!-- Paper Receipt Simulation Sheet -->
+                        <div class="bg-white text-slate-950 font-mono text-xs p-4 rounded-xl shadow-inner min-h-[240px] max-h-[300px] overflow-y-auto space-y-3" dir="ltr">
+                            <div class="text-center border-b border-dashed border-slate-400 pb-3">
+                                <p class="font-black text-xs" data-i18n="simReceiptHeader">SULFA COMPUTER TECHNOLOGY LLC</p>
+                                <p class="text-[10px] text-slate-600 font-sans" data-i18n="simReceiptAddress">Mussafah, Abu Dhabi, UAE</p>
+                                <p class="text-[10px] text-slate-600" data-i18n="simReceiptPh">Tel: +971 56 662 2885</p>
+                                <p class="text-[9px] font-bold text-slate-700 mt-1 uppercase" data-i18n="simReceiptSlip">OFFICIAL RETAIL MOCK RECEIPT</p>
+                            </div>
+
+                            <div id="receiptDynamicRow" class="space-y-1 py-1 text-[11px]">
+                                <p id="receiptEmptyMsg" class="text-center text-slate-400 italic py-6">Add menu items to simulate checkout</p>
+                            </div>
+
+                            <div class="border-t border-dashed border-slate-400 pt-3 space-y-1 text-right text-[11px]">
+                                <div class="flex justify-between font-bold">
+                                    <span>SUBTOTAL:</span>
+                                    <span id="recSubVal">0.00 AED</span>
+                                </div>
+                                <div class="flex justify-between text-[10px] text-slate-600">
+                                    <span data-i18n="simTax">UAE VAT (5%):</span>
+                                    <span id="recTaxVal">0.00 AED</span>
+                                </div>
+                                <div class="flex justify-between font-black text-sm border-t border-slate-400 pt-1">
+                                    <span data-i18n="simTotal">Total Amount:</span>
+                                    <span id="recTotalVal" class="text-techBlue-600">0.00 AED</span>
+                                </div>
+                            </div>
+
+                            <div class="text-center text-[9px] text-slate-500 pt-2" data-i18n="simReceiptThank">
+                                Built to Empower UAE Commercial Hubs
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="executeMockInvoicePrint()" class="w-full mt-6 py-4 bg-slate-800 hover:bg-slate-700 text-white rounded-xl text-xs font-bold border border-slate-700 transition duration-200 flex items-center justify-center gap-2">
+                        <i data-lucide="printer" class="w-4 h-4 text-techBlue-400"></i>
+                        <span data-i18n="simBtnPrint">Print Sample Invoice</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="planner" class="py-20 bg-brandDark-950/60 border-t border-slate-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs font-bold tracking-widest text-techBlue-400 uppercase font-mono">TAILORED COST ARCHITECT</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white" data-i18n="cfgHeading">Interactive Cost Planner & System Architect</h2>
+                <p class="text-slate-400 text-sm sm:text-base" data-i18n="cfgSub">Configure your enterprise service package, choose your hardware bundles, and immediately generate a digital dispatch proposal for our engineers.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Input Selections Panels (Left Panel) -->
+                <div class="lg:col-span-7 space-y-8">
+                    
+                    <!-- System Level Package Selection -->
+                    <div class="bg-brandDark-900 border border-slate-800 rounded-2xl p-6">
+                        <label class="block text-sm font-bold text-slate-300 uppercase tracking-widest mb-4 font-mono" data-i18n="cfgLabelTier">1. Select Service Package Tier</label>
+                        <div class="space-y-3">
+                            <!-- Basic level package -->
+                            <label class="relative flex items-start gap-4 p-4 rounded-xl cursor-pointer border border-slate-800 hover:border-slate-700 bg-brandDark-950/50 transition">
+                                <input type="radio" name="cfgTierRadio" value="basic" checked onclick="selectPricingLevel('basic')" class="mt-1 accent-techBlue-500">
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-center flex-wrap gap-2">
+                                        <span class="text-sm font-bold text-white" data-i18n="cfgTierBasic">Basic Hardware Bundle</span>
+                                        <span class="text-sm font-black font-mono text-techBlue-400" dir="ltr">2,200 AED</span>
+                                    </div>
+                                    <p class="text-xs text-slate-400 mt-1" data-i18n="cfgTierBasicD">Excellent starter configuration including terminal hardware, standard firmware, and basic local billing capacity.</p>
+                                </div>
+                            </label>
+
+                            <!-- Standard software package -->
+                            <label class="relative flex items-start gap-4 p-4 rounded-xl cursor-pointer border border-slate-800 hover:border-slate-700 bg-brandDark-950/50 transition">
+                                <input type="radio" name="cfgTierRadio" value="standard" onclick="selectPricingLevel('standard')" class="mt-1 accent-techBlue-500">
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-center flex-wrap gap-2">
+                                        <span class="text-sm font-bold text-white" data-i18n="cfgTierStd">Standard Software Edition</span>
+                                        <span class="text-sm font-black font-mono text-techBlue-400" dir="ltr">3,200 AED</span>
+                                    </div>
+                                    <p class="text-xs text-slate-400 mt-1" data-i18n="cfgTierStdD">Rich reporting dashboards, cloud-synced stock controllers, offline protection, and advanced user privilege structures.</p>
+                                </div>
+                            </label>
+
+                            <!-- Professional Setup -->
+                            <label class="relative flex items-start gap-4 p-4 rounded-xl cursor-pointer border border-slate-800 hover:border-slate-700 bg-brandDark-950/50 transition">
+                                <input type="radio" name="cfgTierRadio" value="professional" onclick="selectPricingLevel('professional')" class="mt-1 accent-techBlue-500">
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-center flex-wrap gap-2">
+                                        <span class="text-sm font-bold text-white" data-i18n="cfgTierPro">Professional Enterprise Setup</span>
+                                        <span class="text-sm font-bold text-amber-500 font-mono" id="proQuoteLabel" data-i18n="cfgContactAgent">Contact Our Agent</span>
+                                    </div>
+                                    <p class="text-xs text-slate-400 mt-1" data-i18n="cfgTierProD">Multi-branch database synchronization, ERP integrations, customized API middleware, and enterprise warehouses tracking.</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Domain Sector Selection -->
+                    <div class="bg-brandDark-900 border border-slate-800 rounded-2xl p-6">
+                        <label class="block text-sm font-bold text-slate-300 uppercase tracking-widest mb-4 font-mono" data-i18n="cfgLabelIndustry">2. Tell Us Your Operational Domain</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <label class="flex items-center gap-3 p-4 bg-brandDark-950/50 rounded-xl cursor-pointer border border-slate-800 hover:border-slate-700">
+                                <input type="radio" name="cfgIndustry" value="retail" checked onclick="calculateFinalQuote()" class="accent-techBlue-500">
+                                <span class="text-xs font-bold text-slate-300" data-i18n="cfgIndRetail">Supermarket, Pharmacy & General Retail</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-4 bg-brandDark-950/50 rounded-xl cursor-pointer border border-slate-800 hover:border-slate-700">
+                                <input type="radio" name="cfgIndustry" value="fnb" onclick="calculateFinalQuote()" class="accent-techBlue-500">
+                                <span class="text-xs font-bold text-slate-300" data-i18n="cfgIndFnb">Restaurant, Cafe & F&B Hub</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-4 bg-brandDark-950/50 rounded-xl cursor-pointer border border-slate-800 hover:border-slate-700">
+                                <input type="radio" name="cfgIndustry" value="corporate" onclick="calculateFinalQuote()" class="accent-techBlue-500">
+                                <span class="text-xs font-bold text-slate-300" data-i18n="cfgIndCorp">Corporate Workspace, Offices & Datacenters</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Infrastructure Hardware addons selector -->
+                    <div class="bg-brandDark-900 border border-slate-800 rounded-2xl p-6">
+                        <label class="block text-sm font-bold text-slate-300 uppercase tracking-widest mb-4 font-mono" data-i18n="cfgHardware">Additional Infrastructure Add-ons</label>
+                        <div class="space-y-2.5">
+                            <label class="flex items-center gap-3.5 p-4 bg-brandDark-950/50 rounded-xl cursor-pointer transition-all border border-slate-800 hover:border-slate-700">
+                                <input type="checkbox" id="addPrinterChk" onclick="calculateFinalQuote()" class="accent-techBlue-500 w-4 h-4 rounded">
+                                <div class="flex justify-between w-full text-xs">
+                                    <span class="text-slate-300 font-medium" data-i18n="cfgA1">High-Speed Thermal Receipt Printer (80mm)</span>
+                                    <span class="font-bold text-techBlue-400 font-mono" dir="ltr">450 AED</span>
+                                </div>
+                            </label>
+                            <label class="flex items-center gap-3.5 p-4 bg-brandDark-950/50 rounded-xl cursor-pointer transition-all border border-slate-800 hover:border-slate-700">
+                                <input type="checkbox" id="addScannerChk" onclick="calculateFinalQuote()" class="accent-techBlue-500 w-4 h-4 rounded">
+                                <div class="flex justify-between w-full text-xs">
+                                    <span class="text-slate-300 font-medium" data-i18n="cfgA2">Durable Omni-Directional Laser Barcode Scanner</span>
+                                    <span class="font-bold text-techBlue-400 font-mono" dir="ltr">350 AED</span>
+                                </div>
+                            </label>
+                            <!-- CCTV Addon triggers Contact for Site Visit tag instead of numerical sum -->
+                            <label class="flex items-center gap-3.5 p-4 bg-brandDark-950/50 rounded-xl cursor-pointer transition-all border border-slate-800 hover:border-slate-700">
+                                <input type="checkbox" id="addCctvChk" onclick="calculateFinalQuote()" class="accent-techBlue-500 w-4 h-4 rounded">
+                                <div class="flex justify-between w-full text-xs">
+                                    <span class="text-slate-300 font-medium" data-i18n="cfgA3">CCTV Camera Surveillance Bundle</span>
+                                    <span class="font-bold text-amber-500" data-i18n="cfgA3Price">Contact for Site Visit</span>
+                                </div>
+                            </label>
+                            <label class="flex items-center gap-3.5 p-4 bg-brandDark-950/50 rounded-xl cursor-pointer transition-all border border-slate-800 hover:border-slate-700">
+                                <input type="checkbox" id="addAmcChk" onclick="calculateFinalQuote()" class="accent-techBlue-500 w-4 h-4 rounded">
+                                <div class="flex justify-between w-full text-xs">
+                                    <span class="text-slate-300 font-medium" data-i18n="cfgA4">Add Annual IT AMC Maintenance Support SLA</span>
+                                    <span class="font-bold text-techBlue-400 font-mono" dir="ltr">99 AED / mo</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Live Dynamic Breakdown Panel (Right Panel) -->
+                <div class="lg:col-span-5 bg-gradient-to-br from-brandDark-900 to-brandDark-950 border border-slate-800 rounded-2xl p-6 lg:sticky lg:top-24 shadow-2xl space-y-6">
+                    <div>
+                        <h3 class="text-lg font-bold text-white" data-i18n="cfgSummaryTitle">Estimated System Configuration Plan</h3>
+                        <p class="text-xs text-slate-400 mt-0.5" data-i18n="cfgSummarySub">Instant itemized breakdown of selected items</p>
+                    </div>
+
+                    <div class="divide-y divide-slate-800/80 text-xs space-y-3.5 pt-2">
+                        <div class="flex justify-between items-center pt-3.5">
+                            <span class="text-slate-400" data-i18n="cfgSumTier">Selected Core Package:</span>
+                            <span id="labelSummaryBase" class="font-bold text-slate-200">2,200 AED</span>
+                        </div>
+                        <div class="flex justify-between items-center pt-3.5">
+                            <span class="text-slate-400" data-i18n="cfgSumInd">Operational Sector:</span>
+                            <span id="labelSummarySector" class="font-bold text-slate-200">Supermarket, Pharmacy & General Retail</span>
+                        </div>
+                        <div class="flex justify-between items-center pt-3.5">
+                            <span class="text-slate-400" data-i18n="cfgSumAddons">Hardware Extras Total:</span>
+                            <span id="labelSummaryAddons" class="font-bold text-slate-200">0 AED</span>
+                        </div>
+                        <div class="flex justify-between items-center pt-3.5">
+                            <span class="text-slate-400" data-i18n="cfgSumLicensing">Operational IT Support SLA:</span>
+                            <span id="labelSummaryLicensing" class="font-bold text-slate-200">0 AED</span>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Grand Total Box -->
+                    <div class="bg-brandDark-950 border border-slate-800/80 p-5 rounded-xl space-y-1.5 text-center">
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400" data-i18n="cfgSumGrand">Total Estimated Investment:</span>
+                        <div id="grandTotalOutputBlock">
+                            <span id="calculatedTotalVal" class="text-4xl font-black text-techBlue-400 font-mono">2,200</span>
+                            <span id="calculatedTotalCurrency" class="text-xs font-bold text-slate-400 ml-1">AED</span>
+                        </div>
+                    </div>
+
+                    <!-- Direct WhatsApp dispatch trigger -->
+                    <button onclick="dispatchProposalToWhatsApp()" class="w-full py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition-all duration-200 shadow-lg flex items-center justify-center gap-2.5">
+                        <svg class="w-5 h-5 text-white animate-pulse" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.333 4.993L2 22l5.233-1.371a9.918 9.918 0 0 0 4.779 1.332h.004c5.505 0 9.99-4.478 9.99-9.984a9.964 9.964 0 0 0-2.924-7.062A9.975 9.975 0 0 0 12.012 2m5.845 14.187c-.244.688-1.426 1.341-1.956 1.402-.48.056-.96.255-3.085-.572-2.72-1.059-4.478-3.83-4.613-4.01-.137-.181-1.11-1.474-1.11-2.81 0-1.337.702-1.995.952-2.254.25-.26.55-.325.732-.325.183 0 .366.002.525.01.168.007.397-.064.62.474.244.587.824 2.013.895 2.158.072.146.12.316.023.51-.097.195-.145.316-.29.488-.146.173-.306.386-.437.518-.146.146-.3.305-.128.6.172.296.764 1.258 1.637 2.035.918.815 1.693 1.066 1.937 1.188.244.122.386.104.53-.06.146-.165.62-.72.787-.965.167-.244.335-.205.564-.12.228.085 1.448.681 1.7.805.25.122.417.183.479.292.06.109.06.634-.184 1.322"/>
+                        </svg>
+                        <span data-i18n="cfgBtnWhatsApp">Submit Requirements to SULFA Support Desk</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="partners" class="py-16 bg-brandDark-950/80 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+            <p class="text-xs font-bold tracking-widest text-techBlue-400 uppercase font-mono" data-i18n="navPartner">Global Partners & Certified Hardware Brands</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-center opacity-70">
+                <div class="bg-brandDark-900 p-4 rounded-xl border border-slate-800 text-xs font-black font-sans uppercase tracking-widest text-slate-400">CISCO</div>
+                <div class="bg-brandDark-900 p-4 rounded-xl border border-slate-800 text-xs font-black font-sans uppercase tracking-widest text-slate-400">HP ENTERPRISE</div>
+                <div class="bg-brandDark-900 p-4 rounded-xl border border-slate-800 text-xs font-black font-sans uppercase tracking-widest text-slate-400">DELL TECHNOLOGIES</div>
+                <div class="bg-brandDark-900 p-4 rounded-xl border border-slate-800 text-xs font-black font-sans uppercase tracking-widest text-slate-400">FORTINET</div>
+                <div class="bg-brandDark-900 p-4 rounded-xl border border-slate-800 text-xs font-black font-sans uppercase tracking-widest text-slate-400">ZKTeco Biometrics</div>
+                <div class="bg-brandDark-900 p-4 rounded-xl border border-slate-800 text-xs font-black font-sans uppercase tracking-widest text-slate-400">SULFA SYSTEMS</div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-brandDark-950 border-t border-slate-900 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-900">
+                
+                <div class="md:col-span-5 space-y-4">
+                    <a href="#home" class="flex items-center gap-3">
+                        <div class="w-9 h-9 flex items-center justify-center rounded-lg bg-gradient-to-br from-techBlue-500 to-techBlue-600 p-0.5">
+                            <div class="bg-brandDark-950 rounded-[7px] w-full h-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-techBlue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                    <line x1="8" y1="21" x2="16" y2="21"/>
+                                    <line x1="12" y1="17" x2="12" y2="21"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-lg font-extrabold tracking-wider text-white">SULFA</span>
+                            <p class="text-[9px] text-slate-400 uppercase tracking-widest font-mono" data-i18n="brandTitle">Computer Technology</p>
+                        </div>
+                    </a>
+                    <p class="text-xs text-slate-400 leading-relaxed max-w-sm" data-i18n="heroSub">
+                        SULFA Computer Technology LLC delivers complete infrastructure across the UAE. From complex high-performance server farms and certified optical fiber cabling, to advanced surveillance compliance and intelligent enterprise-grade POS environments.
+                    </p>
+                    <div class="flex flex-col gap-2 pt-2">
+                        <div class="flex items-center gap-2 text-xs text-slate-300">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-techBlue-500 shrink-0"></i>
+                            <span data-i18n="footAddress">Mussafah, Sector M-13, Abu Dhabi, United Arab Emirates</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-slate-300">
+                            <i data-lucide="clock" class="w-4 h-4 text-techBlue-500 shrink-0"></i>
+                            <span data-i18n="footHours">Corporate Hours: Saturday - Thursday (9:00 AM - 9:00 PM)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-4 space-y-4">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-slate-300 font-mono">Verified Google Profile</h4>
+                    <div class="bg-brandDark-900 border border-slate-800 p-4 rounded-xl space-y-3">
+                        <div class="flex items-center gap-3">
+                            <div class="p-2 rounded-lg bg-amber-500/10 text-amber-500">
+                                <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-white">SULFA Computer Technology LLC</p>
+                                <div class="flex items-center gap-1.5 mt-0.5">
+                                    <span class="text-xs font-bold text-amber-400" dir="ltr">4.8 / 5.0</span>
+                                    <span class="text-[10px] text-slate-400" data-i18n="footReviewCount">Excellent Customer Feedback on Google Reviews</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://www.google.com/search?q=Sulfa+Computer+Technology+llc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-[11px] font-bold text-techBlue-400 hover:text-techBlue-300 transition-all uppercase tracking-wider">
+                            <span>Open Google Business Map</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-3 space-y-4">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-slate-300 font-mono">Enterprise Direct Channels</h4>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://www.facebook.com/sulfacomputertechnology/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3 py-2 bg-brandDark-900 hover:bg-slate-800 rounded-lg text-xs text-slate-300 transition-all">
+                            <i data-lucide="facebook" class="w-4 h-4 text-blue-500"></i>
+                            <span dir="ltr">SULFA Facebook Portal</span>
+                        </a>
+                        <a href="https://www.instagram.com/sulfa_computer_technology_auh/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3 py-2 bg-brandDark-900 hover:bg-slate-800 rounded-lg text-xs text-slate-300 transition-all">
+                            <i data-lucide="instagram" class="w-4 h-4 text-pink-500"></i>
+                            <span dir="ltr">SULFA Instagram Stream</span>
+                        </a>
+                        <a href="https://wa.me/971566622885" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3 py-2 bg-brandDark-900 hover:bg-slate-800 rounded-lg text-xs text-slate-300 transition-all font-mono">
+                            <i data-lucide="message-square" class="w-4 h-4 text-emerald-500"></i>
+                            <span dir="ltr">Tech Desk: +971 56 662 2885</span>
+                        </a>
+                        <a href="tel:+971556625250" class="flex items-center gap-2 px-3 py-2 bg-brandDark-900 hover:bg-slate-800 rounded-lg text-xs text-slate-300 transition-all font-mono">
+                            <i data-lucide="phone-call" class="w-4 h-4 text-sky-500"></i>
+                            <span dir="ltr">Sec Desk: +971 55 662 5250</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8">
+                <p class="text-[10px] text-slate-500" data-i18n="footRights">© 2026 SULFA Computer Technology LLC. All Rights Reserved.</p>
+                <div class="flex gap-4 text-[10px] text-slate-500">
+                    <span class="hover:text-slate-300 transition-all">Abu Dhabi, UAE</span>
+                    <span>•</span>
+                    <span class="hover:text-slate-300 transition-all">Value-Added Reseller Support</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        let currentPlannerTier = 'basic';
+        let simulatorLedger = [];
+
+        function toggleGlobalLanguage() {
+            activeBilingualLang = (activeBilingualLang === 'en') ? 'ar' : 'en';
+            applyLanguageState();
+        }
+
+        function applyLanguageState() {
+            const htmlTag = document.documentElement;
+            const bodyTag = document.body;
+            const toggleLabel = document.getElementById('langTextLabel');
+
+            if (activeBilingualLang === 'ar') {
+                htmlTag.setAttribute('dir', 'rtl');
+                htmlTag.setAttribute('lang', 'ar');
+                bodyTag.className = "corporate-gradient-bg text-slate-100 font-active-ar antialiased tech-circuit-lines min-h-screen";
+                if (toggleLabel) toggleLabel.innerText = "English";
+            } else {
+                htmlTag.setAttribute('dir', 'ltr');
+                htmlTag.setAttribute('lang', 'en');
+                bodyTag.className = "corporate-gradient-bg text-slate-100 font-active-en antialiased tech-circuit-lines min-h-screen";
+                if (toggleLabel) toggleLabel.innerText = "العربية";
+            }
+
+            const targets = document.querySelectorAll('[data-i18n]');
+            targets.forEach(el => {
+                const phraseKey = el.getAttribute('data-i18n');
+                if (dictMatrix[activeBilingualLang] && dictMatrix[activeBilingualLang][phraseKey]) {
+                    el.innerText = dictMatrix[activeBilingualLang][phraseKey];
+                }
+            });
+
+            calculateFinalQuote();
+            updateSimCartDisplay();
+        }
+
+        function selectPricingLevel(tierCode) {
+            currentPlannerTier = tierCode;
+            calculateFinalQuote();
+        }
+
+        function calculateFinalQuote() {
+            let baseAmt = 0;
+            let triggerAgentMode = false;
+
+            if (currentPlannerTier === 'basic') {
+                baseAmt = 2200;
+            } else if (currentPlannerTier === 'standard') {
+                baseAmt = 3200;
+            } else if (currentPlannerTier === 'professional') {
+                triggerAgentMode = true;
+            }
+
+            const activeIndInput = document.querySelector('input[name="cfgIndustry"]:checked');
+            const domainVal = activeIndInput ? activeIndInput.value : 'retail';
+
+            const usePrinter = document.getElementById('addPrinterChk').checked;
+            const useScanner = document.getElementById('addScannerChk').checked;
+            const useCctv = document.getElementById('addCctvChk').checked;
+            const useAmc = document.getElementById('addAmcChk').checked;
+
+            let addonsAmt = 0;
+            if (usePrinter) addonsAmt += 450;
+            if (useScanner) addonsAmt += 350;
+            // CCTV deliberately omitted from numerical calculation
+
+            const activeTotal = baseAmt + addonsAmt;
+            const licenseAmt = useAmc ? 99 : 0;
+
+            const elBase = document.getElementById('labelSummaryBase');
+            const elSector = document.getElementById('labelSummarySector');
+            const elAddons = document.getElementById('labelSummaryAddons');
+            const elLicensing = document.getElementById('labelSummaryLicensing');
+            const elTotalValue = document.getElementById('calculatedTotalVal');
+            const elTotalCurrency = document.getElementById('calculatedTotalCurrency');
+
+            const currencyStr = activeBilingualLang === 'ar' ? 'درهم إماراتي' : 'AED';
+            const moStr = activeBilingualLang === 'ar' ? 'درهم / شهرياً' : 'AED / month';
+            const textAgent = activeBilingualLang === 'ar' ? 'تواصل مع خدمة العملاء' : 'Contact Our Agent';
+            const textSiteVisit = activeBilingualLang === 'ar' ? 'تواصل للمعاينة الميدانية' : 'Contact for Site Visit';
+
+            if (triggerAgentMode) {
+                if (elBase) elBase.innerText = textAgent;
+                if (elTotalValue) {
+                    elTotalValue.innerText = textAgent;
+                    elTotalValue.className = "text-2xl sm:text-3xl font-black text-amber-500 font-sans";
+                }
+                if (elTotalCurrency) elTotalCurrency.style.display = 'none';
+            } else {
+                if (elBase) elBase.innerText = `${baseAmt.toLocaleString()} ${currencyStr}`;
+                if (elTotalValue) {
+                    elTotalValue.innerText = activeTotal.toLocaleString();
+                    elTotalValue.className = "text-4xl font-black text-techBlue-400 font-mono";
+                }
+                if (elTotalCurrency) {
+                    elTotalCurrency.style.display = 'inline';
+                    elTotalCurrency.innerText = currencyStr;
+                }
+            }
+
+            if (elSector) {
+                if (domainVal === 'retail') {
+                    elSector.innerText = dictMatrix[activeBilingualLang].cfgIndRetail;
+                } else if (domainVal === 'fnb') {
+                    elSector.innerText = dictMatrix[activeBilingualLang].cfgIndFnb;
                 } else {
-                    typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
-                    charIndex++;
-                    typingSpeed = 100;
-                }
-
-                if (!isDeleting && charIndex === currentPhrase.length) {
-                    isDeleting = true;
-                    typingSpeed = delayBetweenPhrases;
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    phraseIndex = (phraseIndex + 1) % phrases.length;
-                    typingSpeed = 100;
-                }
-
-                setTimeout(typeWriter, typingSpeed);
-            }
-
-            // Only run if the element exists to prevent errors
-            if (typingElement) {
-                typeWriter();
-            }
-
-            // Saleculator Features Toggle
-            const showSaleculatorOptionsBtn = document.getElementById('show-saleculator-options');
-            const saleculatorOptions = document.getElementById('saleculator-options');
-            const retailFeaturesCard = document.getElementById('retail-features-card');
-            const restaurantFeaturesCard = document.getElementById('restaurant-features-card');
-            const showRetailBtn = document.getElementById('show-retail');
-            const showRestaurantBtn = document.getElementById('show-restaurant');
-            
-            if (showSaleculatorOptionsBtn) {
-                showSaleculatorOptionsBtn.addEventListener('click', () => {
-                    if (saleculatorOptions) {
-                        saleculatorOptions.classList.toggle('hidden');
-                    }
-                    if (retailFeaturesCard) {
-                        retailFeaturesCard.classList.add('hidden');
-                    }
-                    if (restaurantFeaturesCard) {
-                        restaurantFeaturesCard.classList.add('hidden');
-                    }
-                });
-            }
-            
-            if (showRetailBtn) {
-                showRetailBtn.addEventListener('click', () => {
-                    if (retailFeaturesCard) {
-                        retailFeaturesCard.classList.remove('hidden');
-                    }
-                    if (restaurantFeaturesCard) {
-                        restaurantFeaturesCard.classList.add('hidden');
-                    }
-                    document.getElementById('saleculator-features').scrollIntoView({ behavior: 'smooth' });
-                });
-            }
-            
-            if (showRestaurantBtn) {
-                showRestaurantBtn.addEventListener('click', () => {
-                    if (restaurantFeaturesCard) {
-                        restaurantFeaturesCard.classList.remove('hidden');
-                    }
-                    if (retailFeaturesCard) {
-                        retailFeaturesCard.classList.add('hidden');
-                    }
-                    document.getElementById('saleculator-features').scrollIntoView({ behavior: 'smooth' });
-                });
-            }
-
-            // AI Assistant functionality
-            const aiInput = document.getElementById('ai-input');
-            const aiSubmitBtn = document.getElementById('ai-submit');
-            const aiResponseDiv = document.getElementById('ai-response');
-            const aiLoadingDiv = document.getElementById('ai-loading');
-            const messageBox = document.getElementById('message-box');
-            const messageBoxText = document.getElementById('message-box-text');
-            const messageBoxButton = document.getElementById('message-box-button');
-
-            function showMessageBox(message) {
-                if (messageBox && messageBoxText) {
-                    messageBoxText.textContent = message;
-                    messageBox.style.display = 'flex';
-                    const backdrop = document.createElement('div');
-                    backdrop.id = 'backdrop';
-                    backdrop.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1999;';
-                    document.body.appendChild(backdrop);
+                    elSector.innerText = dictMatrix[activeBilingualLang].cfgIndCorp;
                 }
             }
-            
-            if (messageBoxButton && messageBox) {
-                messageBoxButton.addEventListener('click', () => {
-                    messageBox.style.display = 'none';
-                    const backdrop = document.getElementById('backdrop');
-                    if (backdrop) {
-                        backdrop.remove();
-                    }
-                });
-            }
 
-            if (aiSubmitBtn && aiInput && aiLoadingDiv && aiResponseDiv) {
-                aiSubmitBtn.addEventListener('click', async () => {
-                    const prompt = aiInput.value.trim();
-                    if (prompt === "") {
-                        showMessageBox("Please describe your business needs.");
-                        return;
-                    }
-
-                    aiLoadingDiv.classList.remove('hidden');
-                    aiResponseDiv.classList.add('hidden');
-                    aiResponseDiv.textContent = '';
-                    aiSubmitBtn.disabled = true;
-
-                    const services = [
-                        "Saleculator POS solutions for retail stores.",
-                        "Saleculator POS solutions for restaurants and cafeterias.",
-                        "Customized Mobile/ Desktop App Development.",
-                        "Website developing.",
-                        "IT support and AMC services.",
-                        "CCTV maintenance.",
-                        "Sales and services for used laptops and desktops."
-                    ];
-                    
-                    let chatHistory = [{
-                        role: "user",
-                        parts: [{ text: `Based on the following user input, recommend one or more services from this list: ${services.join(', ')}. The user's input is: "${prompt}". Explain why you recommend these services in a professional and clear manner. If the input is not related to any service, politely decline.` }]
-                    }];
-
-                    const payload = { contents: chatHistory };
-                    const apiKey = "";
-                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-
-                    let response;
-                    let result;
-                    let retries = 3;
-                    let delay = 1000;
-
-                    for (let i = 0; i < retries; i++) {
-                        try {
-                            response = await fetch(apiUrl, {
-                                method: 'POST',
-                                headers: { 'Content-Type': 'application/json' },
-                                body: JSON.stringify(payload)
-                            });
-
-                            if (response.status === 429) {
-                                await new Promise(res => setTimeout(res, delay));
-                                delay *= 2;
-                                continue;
-                            }
-
-                            result = await response.json();
-                            if (result && result.candidates && result.candidates.length > 0) {
-                                const text = result.candidates[0].content.parts[0].text;
-                                aiResponseDiv.textContent = text;
-                                aiResponseDiv.classList.remove('hidden');
-                            } else {
-                                aiResponseDiv.textContent = "Sorry, I couldn't get a recommendation right now. Please try again later.";
-                                aiResponseDiv.classList.remove('hidden');
-                            }
-                            break;
-                        } catch (error) {
-                            if (i < retries - 1) {
-                                await new Promise(res => setTimeout(res, delay));
-                                delay *= 2;
-                            } else {
-                                showMessageBox("An error occurred while fetching a recommendation. Please check your network and try again.");
-                                console.error('API call failed:', error);
-                            }
-                        }
-                    }
-                    
-                    aiLoadingDiv.classList.add('hidden');
-                    aiSubmitBtn.disabled = false;
-                });
-            }
-            
-            // TTS Functionality
-            const playWelcomeBtn = document.getElementById('play-welcome');
-            let audioContext;
-
-            // Only initialize audio context if the button exists and is clicked
-            if (playWelcomeBtn) {
-                audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            }
-
-            function base64ToArrayBuffer(base64) {
-                const binaryString = atob(base64);
-                const len = binaryString.length;
-                const bytes = new Uint8Array(len);
-                for (let i = 0; i < len; i++) {
-                    bytes[i] = binaryString.charCodeAt(i);
+            if (elAddons) {
+                let addOnString = `${addonsAmt.toLocaleString()} ${currencyStr}`;
+                if (useCctv) {
+                    addOnString += ` (+ ${textSiteVisit})`;
                 }
-                return bytes.buffer;
+                elAddons.innerText = addOnString;
             }
 
-            function pcmToWav(pcm16, sampleRate) {
-                const pcmData = pcm16.buffer;
-                const wavHeader = new Uint8Array(44);
-                const view = new DataView(wavHeader.buffer);
+            if (elLicensing) {
+                elLicensing.innerText = `${licenseAmt} ${moStr}`;
+            }
+        }
 
-                // RIFF identifier
-                view.setUint32(0, 0x52494646, false); // "RIFF"
-                // file length (set later)
-                view.setUint32(4, 36 + pcmData.byteLength, true);  
-                // RIFF type
-                view.setUint32(8, 0x57415645, false); // "WAVE"
-                // format chunk identifier
-                view.setUint32(12, 0x666d7420, false); // "fmt "
-                // format chunk length
-                view.setUint32(16, 16, true);
-                // sample format (1 = PCM)
-                view.setUint16(20, 1, true);
-                // channel count
-                view.setUint16(22, 1, true);
-                // sample rate
-                view.setUint32(24, sampleRate, true);
-                // byte rate (sample rate * block align)
-                view.setUint32(28, sampleRate * 2, true);
-                // block align (channels * bytes per sample)
-                view.setUint16(32, 2, true);
-                // bits per sample
-                view.setUint16(34, 16, true);
-                // data chunk identifier
-                view.setUint32(36, 0x64617461, false); // "data"
-                // data chunk length (set later)
-                view.setUint32(40, pcmData.byteLength, true);
+        function dispatchProposalToWhatsApp() {
+            const activeIndInput = document.querySelector('input[name="cfgIndustry"]:checked');
+            const domainVal = activeIndInput ? activeIndInput.value : 'retail';
 
-                const wavBlob = new Blob([wavHeader, pcmData], { type: 'audio/wav' });
-                return wavBlob;
+            const usePrinter = document.getElementById('addPrinterChk').checked;
+            const useScanner = document.getElementById('addScannerChk').checked;
+            const useCctv = document.getElementById('addCctvChk').checked;
+            const useAmc = document.getElementById('addAmcChk').checked;
+
+            const domainLabel = domainVal === 'fnb' ? 'F&B Outlet / Cafe' : (domainVal === 'corporate' ? 'Corporate Hub Workspace' : 'General Retail Setup');
+            const amcLabel = useAmc ? 'Annual Maintenance SLA Contract (99 AED/mo)' : 'Standard support tier';
+
+            let listElements = [];
+            if (usePrinter) listElements.push('80mm Thermal Receipt Printer');
+            if (useScanner) listElements.push('Omni-Directional Laser Barcode Scanner');
+            if (useCctv) listElements.push('CCTV Camera Surveillance Bundle (Contact for Site Visit Requested)');
+
+            const componentsDesc = listElements.length > 0 ? listElements.join(', ') : 'None';
+
+            let selectedPackageLabel = "";
+            let calculatedEstimate = "";
+
+            if (currentPlannerTier === 'basic') {
+                selectedPackageLabel = "Basic Hardware Bundle (2200 AED)";
+                calculatedEstimate = `${(2200 + (usePrinter ? 450 : 0) + (useScanner ? 350 : 0)).toLocaleString()} AED ${useCctv ? '(+ CCTV Site Visit Needed)' : ''}`;
+            } else if (currentPlannerTier === 'standard') {
+                selectedPackageLabel = "Standard Software Edition (3200 AED)";
+                calculatedEstimate = `${(3200 + (usePrinter ? 450 : 0) + (useScanner ? 350 : 0)).toLocaleString()} AED ${useCctv ? '(+ CCTV Site Visit Needed)' : ''}`;
+            } else {
+                selectedPackageLabel = "Professional Enterprise Custom Setup (Contact Our Agent)";
+                calculatedEstimate = "To be estimated by agent";
             }
 
-            if (playWelcomeBtn) {
-                playWelcomeBtn.addEventListener('click', async () => {
-                    playWelcomeBtn.disabled = true;
-                    const originalText = playWelcomeBtn.textContent;
-                    playWelcomeBtn.textContent = 'Generating...';
+            const contentEN = `Dear SULFA Computer Technology,\nI configured a dynamic IT & All-In-One Solution proposal:\n- Core Tier: ${selectedPackageLabel}\n- Working Sector: ${domainLabel}\n- Extra Components: ${componentsDesc}\n- SLA Support: ${amcLabel}\n- Custom Total: ${calculatedEstimate}\n\nPlease get in touch to coordinate the setup.`;
+            const contentAR = `السادة شركة سلفا للكمبيوتر والتكنولوجيا،\nلقد قمت بإعداد حزمة المواصفات المخصصة:\n- الباقة الأساسية: ${selectedPackageLabel}\n- القطاع التجاري: ${domainLabel}\n- الملحقات الإضافية: ${componentsDesc}\n- صيانة ودعم AMC السنوي: ${amcLabel}\n- التكلفة التقديرية: ${calculatedEstimate}\n\nيرجى التواصل لتأكيد التركيب والزيارة الميدانية.`;
 
-                    const textToSpeak = "Welcome to SULFA Computer Technologies, your trusted partner for all IT and POS solutions. We're here to help your business succeed.";
-                    const prompt = `Say in a professional and warm tone: ${textToSpeak}`;
-                    const payload = {
-                        contents: [{
-                            parts: [{ text: prompt }]
-                        }],
-                        generationConfig: {
-                            responseModalities: ["AUDIO"],
-                            speechConfig: {
-                                voiceConfig: {
-                                    prebuiltVoiceConfig: { voiceName: "Rasalgethi" }
-                                }
-                            }
-                        },
-                        model: "gemini-2.5-flash-preview-tts"
-                    };
-                    const apiKey = "";
-                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+            const finalMessage = activeBilingualLang === 'ar' ? contentAR : contentEN;
+            window.open(`https://wa.me/971566622885?text=${encodeURIComponent(finalMessage)}`, '_blank');
+        }
 
-                    let response;
-                    let result;
-                    let retries = 3;
-                    let delay = 1000;
-
-                    for (let i = 0; i < retries; i++) {
-                        try {
-                            response = await fetch(apiUrl, {
-                                method: 'POST',
-                                headers: { 'Content-Type': 'application/json' },
-                                body: JSON.stringify(payload)
-                            });
-
-                            if (response.status === 429) {
-                                await new Promise(res => setTimeout(res, delay));
-                                delay *= 2;
-                                continue;
-                            }
-
-                            result = await response.json();
-                            const part = result?.candidates?.[0]?.content?.parts?.[0];
-                            const audioData = part?.inlineData?.data;
-                            const mimeType = part?.inlineData?.mimeType;
-
-                            if (audioData && mimeType && mimeType.startsWith("audio/L16")) {
-                                const sampleRate = parseInt(mimeType.match(/rate=(\d+)/)[1], 10);
-                                const pcmData = base64ToArrayBuffer(audioData);
-                                const pcm16 = new Int16Array(pcmData);
-                                const wavBlob = pcmToWav(pcm16, sampleRate);
-                                const audioUrl = URL.createObjectURL(wavBlob);
-                                const audio = new Audio(audioUrl);
-                                audio.play().catch(e => showMessageBox("Failed to play audio. Your browser might be blocking autoplay."));
-                            } else {
-                                showMessageBox("Sorry, failed to generate audio. Please try again.");
-                            }
-                            break;
-                        } catch (error) {
-                            if (i < retries - 1) {
-                                await new Promise(res => setTimeout(res, delay));
-                                delay *= 2;
-                            } else {
-                                showMessageBox("An error occurred while generating audio. Please try again later.");
-                                console.error("Audio generation failed:", error);
-                            }
-                        }
-                    }
-                    
-                    playWelcomeBtn.textContent = originalText;
-                    playWelcomeBtn.disabled = false;
-                });
-            }
+        function addSimItem(name, price) {
+            simulatorLedger.push({ name, price });
             
-            // Contact form functionality
-            const contactForm = document.getElementById('contact-form');
-            const formSubmitBtn = document.getElementById('form-submit-btn');
-            const contactFormContainer = document.getElementById('contact-form-container');
-
-            if (contactForm && formSubmitBtn && contactFormContainer) {
-                contactForm.addEventListener('submit', (event) => {
-                    event.preventDefault(); // Prevents the default form submission
-
-                    formSubmitBtn.disabled = true;
-                    const originalBtnText = formSubmitBtn.textContent;
-                    formSubmitBtn.textContent = 'Sending...';
-
-                    // Simulate form submission
-                    setTimeout(() => {
-                        const name = document.getElementById('name').value;
-                        
-                        // Display a success message
-                        showMessageBox(`Thank you, ${name}! Your message has been sent successfully.`);
-                        
-                        // Reset the form and button
-                        contactForm.reset();
-                        formSubmitBtn.textContent = originalBtnText;
-                        formSubmitBtn.disabled = false;
-                        contactFormContainer.style.display = 'none';
-                    }, 1500); // Simulate a network delay
-                });
+            const toastElement = document.getElementById('simulatorFeedbackToast');
+            if (toastElement) {
+                toastElement.classList.remove('opacity-0', 'translate-y-2', 'pointer-events-none');
+                toastElement.classList.add('opacity-100', 'translate-y-0');
+                setTimeout(() => {
+                    toastElement.classList.add('opacity-0', 'translate-y-2', 'pointer-events-none');
+                    toastElement.classList.remove('opacity-100', 'translate-y-0');
+                }, 1600);
             }
 
-            // Floating chat widget functionality
-            const toggleChatBtn = document.getElementById('toggle-chat-btn');
+            updateSimCartDisplay();
+        }
+
+        function clearSimCart() {
+            simulatorLedger = [];
+            updateSimCartDisplay();
+        }
+
+        function updateSimCartDisplay() {
+            const rootRows = document.getElementById('receiptDynamicRow');
+            const labelEmpty = document.getElementById('receiptEmptyMsg');
+            const displaySub = document.getElementById('recSubVal');
+            const displayTax = document.getElementById('recTaxVal');
+            const displayTotal = document.getElementById('recTotalVal');
+
+            const currencyStr = activeBilingualLang === 'ar' ? 'درهم' : 'AED';
+
+            if (simulatorLedger.length === 0) {
+                if (labelEmpty) labelEmpty.style.display = 'block';
+                rootRows.innerHTML = '';
+                if (displaySub) displaySub.innerText = `0.00 ${currencyStr}`;
+                if (displayTax) displayTax.innerText = `0.00 ${currencyStr}`;
+                if (displayTotal) displayTotal.innerText = `0.00 ${currencyStr}`;
+                return;
+            }
+
+            if (labelEmpty) labelEmpty.style.display = 'none';
+            rootRows.innerHTML = '';
+
+            let subSum = 0;
+            simulatorLedger.forEach(item => {
+                subSum += item.price;
+                const elementRow = document.createElement('div');
+                elementRow.className = "flex justify-between text-slate-800 font-medium py-0.5 border-b border-slate-100";
+                elementRow.innerHTML = `
+                    <span class="truncate pr-2">${item.name}</span>
+                    <span class="shrink-0 font-bold" dir="ltr">${item.price.toLocaleString()}.00 ${currencyStr}</span>
+                `;
+                rootRows.appendChild(elementRow);
+            });
+
+            const computedTax = subSum * 0.05;
+            const grandTotalSum = subSum + computedTax;
+
+            if (displaySub) displaySub.innerText = `${subSum.toLocaleString()}.00 ${currencyStr}`;
+            if (displayTax) displayTax.innerText = `${computedTax.toLocaleString()}.00 ${currencyStr}`;
+            if (displayTotal) displayTotal.innerText = `${grandTotalSum.toLocaleString()}.00 ${currencyStr}`;
+        }
+
+        function executeMockInvoicePrint() {
+            const printMessage = activeBilingualLang === 'ar' 
+                ? 'جاري إرسال أمر الفاتورة المخصصة إلى طابعة سلفا الافتراضية ST-120...' 
+                : 'Directing mock XML billing pipeline to SULFA printer node ST-120...';
             
-            if (toggleChatBtn && contactFormContainer) {
-                toggleChatBtn.addEventListener('click', () => {
-                    contactFormContainer.style.display = contactFormContainer.style.display === 'flex' ? 'none' : 'flex';
-                });
-            }
-
-            // Welcome message pop-up functionality
-            const welcomeMessageBox = document.getElementById('welcome-message-box');
-            const dismissWelcomeBtn = document.getElementById('dismiss-welcome-btn');
-
-            if (welcomeMessageBox && dismissWelcomeBtn) {
-                // Check if the user has already seen the welcome message
-                const hasSeenWelcomeMessage = localStorage.getItem('hasSeenWelcomeMessage');
-                if (!hasSeenWelcomeMessage) {
-                    // Show the welcome message pop-up after a short delay
-                    setTimeout(() => {
-                        welcomeMessageBox.style.display = 'flex';
-                    }, 1000);
-                }
-
-                dismissWelcomeBtn.addEventListener('click', () => {
-                    welcomeMessageBox.style.display = 'none';
-                    // Set the flag in localStorage so it doesn't show up again
-                    localStorage.setItem('hasSeenWelcomeMessage', 'true');
-                });
-            }
+            const notificationBox = document.createElement('div');
+            notificationBox.className = "fixed bottom-5 right-5 z-50 bg-brandDark-900 border border-techBlue-500/40 text-slate-100 px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3 animate-bounce";
+            notificationBox.innerHTML = `
+                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+                <span class="text-xs font-bold font-sans">${printMessage}</span>
+            `;
+            document.body.appendChild(notificationBox);
+            lucide.createIcons();
             
-            // NEW: Hamburger menu functionality
-            const hamburgerBtn = document.querySelector('.hamburger-menu');
-            const navLinksContainer = document.querySelector('.nav-links-container');
-            const navLinks = document.querySelectorAll('.nav-links a');
-            
-            if (hamburgerBtn && navLinksContainer) {
-                hamburgerBtn.addEventListener('click', () => {
-                    hamburgerBtn.classList.toggle('active');
-                    navLinksContainer.classList.toggle('open');
-                });
-            }
-            
-            // Close the menu when a nav link is clicked (for mobile)
-            if (navLinksContainer) {
-                navLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        if (hamburgerBtn) {
-                            hamburgerBtn.classList.remove('active');
-                        }
-                        navLinksContainer.classList.remove('open');
-                    });
-                });
-            }
-        });
+            setTimeout(() => {
+                notificationBox.remove();
+            }, 3000);
+        }
+
+        window.onload = function() {
+            applyLanguageState();
+        };
     </script>
 </body>
 </html>
